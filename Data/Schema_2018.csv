@@ -1,0 +1,130 @@
+Column,QuestionText
+Respondent,Randomized respondent ID number (not in order of survey response time)
+Hobby,Do you code as a hobby?
+OpenSource,Do you contribute to open source projects?
+Country,In which country do you currently reside?
+Student,"Are you currently enrolled in a formal, degree-granting college or university program?"
+Employment,Which of the following best describes your current employment status?
+FormalEducation,Which of the following best describes the highest level of formal education that you’ve completed?
+UndergradMajor,You previously indicated that you went to a college or university. Which of the following best describes your main field of study (aka 'major')
+CompanySize,Approximately how many people are employed by the company or organization you work for?
+DevType,Which of the following describe you? Please select all that apply.
+YearsCoding,"Including any education, for how many years have you been coding?"
+YearsCodingProf,For how many years have you coded professionally (as a part of your work)?
+JobSatisfaction,"How satisfied are you with your current job? If you work more than one job, please answer regarding the one you spend the most hours on."
+CareerSatisfaction,"Overall, how satisfied are you with your career thus far?"
+HopeFiveYears,Which of the following best describes what you hope to be doing in five years?
+JobSearchStatus,Which of the following best describes your current job-seeking status?
+LastNewJob,When was the last time that you took a job with a new employer?
+AssessJob1,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The industry that I'd be working in"
+AssessJob2,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The financial performance or funding status of the company or organization"
+AssessJob3,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The specific department or team I'd be working on"
+AssessJob4,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The languages, frameworks, and other technologies I'd be working with"
+AssessJob5,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The compensation and benefits offered"
+AssessJob6,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The office environment or company culture"
+AssessJob7,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The opportunity to work from home/remotely"
+AssessJob8,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. Opportunities for professional development"
+AssessJob9,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. The diversity of the company or organization"
+AssessJob10,"Imagine that you are assessing a potential job opportunity. Please rank the following aspects of the job opportunity in order of importance (by dragging the choices up and down), where 1 is the most important and 10 is the least important. How widely used or impactful the product or service I'd be working on is"
+AssessBenefits1,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Salary and/or bonuses"
+AssessBenefits2,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Stock options or shares"
+AssessBenefits3,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Health insurance"
+AssessBenefits4,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Parental leave"
+AssessBenefits5,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Fitness or wellness benefit (ex. gym membership, nutritionist)"
+AssessBenefits6,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Retirement or pension savings matching"
+AssessBenefits7,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Company-provided meals or snacks"
+AssessBenefits8,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Computer/office equipment allowance"
+AssessBenefits9,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Childcare benefit"
+AssessBenefits10,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Transportation benefit (ex. company-provided transportation, public transit allowance)"
+AssessBenefits11,"Now, imagine you are assessing a job's benefits package. Please rank the following aspects of a job's benefits package from most to least important to you (by dragging the choices up and down), where 1 is most important and 11 is least important. Conference or education budget"
+JobContactPriorities1,"Imagine that a company wanted to contact you about a job that is a good fit for you. Please rank your preference in how you are contacted (by dragging the choices up and down), where 1 is the most preferred and 5 is the least preferred. Telephone call"
+JobContactPriorities2,"Imagine that a company wanted to contact you about a job that is a good fit for you. Please rank your preference in how you are contacted (by dragging the choices up and down), where 1 is the most preferred and 5 is the least preferred. Email to my private address"
+JobContactPriorities3,"Imagine that a company wanted to contact you about a job that is a good fit for you. Please rank your preference in how you are contacted (by dragging the choices up and down), where 1 is the most preferred and 5 is the least preferred. Email to my work address"
+JobContactPriorities4,"Imagine that a company wanted to contact you about a job that is a good fit for you. Please rank your preference in how you are contacted (by dragging the choices up and down), where 1 is the most preferred and 5 is the least preferred. Message on a job site"
+JobContactPriorities5,"Imagine that a company wanted to contact you about a job that is a good fit for you. Please rank your preference in how you are contacted (by dragging the choices up and down), where 1 is the most preferred and 5 is the least preferred. Message on a social media site"
+JobEmailPriorities1,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Details on the company I'd be working for"
+JobEmailPriorities2,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Details on the specific department I'd be working for or product I'd be working on"
+JobEmailPriorities3,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Specifics of why they think I'd be a good fit for the role (ex. my prior work history, projects on GitHub)"
+JobEmailPriorities4,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Details of which technologies I'd be working with"
+JobEmailPriorities5,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. An estimate of the compensation range"
+JobEmailPriorities6,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Information on the company's hiring process"
+JobEmailPriorities7,"Imagine that same company decided to contact you through email. Please rank the following items by how important it is to include them in the message (by dragging the choices up and down), where 1 is the most important and 7 is the least important. Details on the company's product development process"
+UpdateCV,"Think back to the last time you updated your resumé, CV, or an online profile on a job site. What is the main reason that you did so?"
+Currency,"Which currency do you use day-to-day? If your answer is complicated, please pick the one you're most comfortable estimating in."
+Salary,"What is your current gross salary (before taxes and deductions), in ${q://QID50/ChoiceGroup/SelectedChoicesTextEntry}? Please enter a whole number in the box below, without any punctuation. If you are paid hourly, please estimate an equivalent weekly, monthly, or yearly salary. If you prefer not to answer, please leave the box empty."
+SalaryType,"Is that salary weekly, monthly, or yearly?"
+ConvertedSalary,"Salary converted to annual USD salaries using the exchange rate on 2018-01-18, assuming 12 working months and 50 working weeks."
+CurrencySymbol,Three digit currency abbreviation.
+CommunicationTools,"Which of the following tools do you use to communicate, coordinate, or share knowledge with your coworkers? Please select all that apply."
+TimeFullyProductive,"Suppose a new developer with four years of experience, including direct experience working with your company's main technical stack, joined your team tomorrow.  All other things being equal, how long would you expect it to take before they were fully productive and contributing at a typical level to your main code base?"
+EducationTypes,Which of the following types of non-degree education have you used or participated in? Please select all that apply.
+SelfTaughtTypes,"You indicated that you had taught yourself a programming technology without taking a course. What resources did you use to do that? If you’ve done it more than once, please think about the most recent time you’ve done so. Please select all that apply."
+TimeAfterBootcamp,You indicated previously that you went through a developer training program or bootcamp. How long did it take you to get a full-time job as a developer after graduating?
+HackathonReasons,You indicated previously that you had participated in an online coding competition or hackathon.  Which of the following best describe your reasons for doing so?
+AgreeDisagree1,To what extent do you agree or disagree with each of the following statements? I feel a sense of kinship or connection to other developers
+AgreeDisagree2,To what extent do you agree or disagree with each of the following statements? I think of myself as competing with my peers
+AgreeDisagree3,To what extent do you agree or disagree with each of the following statements? I'm not as good at programming as most of my peers
+LanguageWorkedWith,"Which of the following programming, scripting, and markup languages have you done extensive development work in over the past year, and which do you want to work in over the next year?  (If you both worked with the language and want to continue to do so, please check both boxes in that row.)"
+LanguageDesireNextYear,"Which of the following programming, scripting, and markup languages have you done extensive development work in over the past year, and which do you want to work in over the next year?  (If you both worked with the language and want to continue to do so, please check both boxes in that row.)"
+DatabaseWorkedWith,"Which of the following database environments have you done extensive development work in over the past year, and which do you want to work in over the next year?   (If you both worked with the database and want to continue to do so, please check both boxes in that row.)"
+DatabaseDesireNextYear,"Which of the following database environments have you done extensive development work in over the past year, and which do you want to work in over the next year?   (If you both worked with the database and want to continue to do so, please check both boxes in that row.)"
+PlatformWorkedWith,"Which of the following platforms have you done extensive development work for over the past year?   (If you both developed for the platform and want to continue to do so, please check both boxes in that row.)"
+PlatformDesireNextYear,"Which of the following platforms have you done extensive development work for over the past year?   (If you both developed for the platform and want to continue to do so, please check both boxes in that row.)"
+FrameworkWorkedWith,"Which of the following libraries, frameworks, and tools have you done extensive development work in over the past year, and which do you want to work in over the next year?"
+FrameworkDesireNextYear,"Which of the following libraries, frameworks, and tools have you done extensive development work in over the past year, and which do you want to work in over the next year?"
+IDE,Which development environment(s) do you use regularly?  Please check all that apply.
+OperatingSystem,What is the primary operating system in which you work?
+NumberMonitors,How many monitors are set up at your workstation?
+Methodology,Which of the following methodologies do you have experience working in?
+VersionControl,What version control systems do you use regularly? Please select all that apply.
+CheckInCode,"Over the last year, how often have you checked-in or committed code?"
+AdBlocker,Do you have ad-blocking software installed on any computers you use regularly?
+AdBlockerDisable,"In the past month, have you disabled your ad blocker for any reason, even temporarily or for a specific website?"
+AdBlockerReasons,What are the reasons that you have disabled your ad blocker in the past month? Please select all that apply.
+AdsAgreeDisagree1,To what extent do you agree or disagree with the following statements: Online advertising can be valuable when it is relevant to me
+AdsAgreeDisagree2,To what extent do you agree or disagree with the following statements: I enjoy seeing online updates from companies that I like
+AdsAgreeDisagree3,To what extent do you agree or disagree with the following statements: I fundamentally dislike the concept of advertising
+AdsActions,Which of the following actions have you taken in the past month? Please select all that apply.
+AdsPriorities1,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement is relevant to me"
+AdsPriorities2,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement is honest about its goals"
+AdsPriorities3,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement provides useful information"
+AdsPriorities4,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement seems trustworthy"
+AdsPriorities5,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement is from a company that I like"
+AdsPriorities6,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement offers something of value, like a free trial"
+AdsPriorities7,"Please rank the following advertising qualities in order of their importance to you (by dragging the choices up and down), where 1 is the most important, and 7 is the least important. The advertisement avoids fluffy or vague language"
+AIDangerous,What do you think is the most dangerous aspect of increasingly advanced AI technology?
+AIInteresting,What do you think is the most exciting aspect of increasingly advanced AI technology?
+AIResponsible,"Whose responsibility is it, <u>primarily</u>, to consider the ramifications of increasingly advanced AI technology?"
+AIFuture,"Overall, what's your take on the future of artificial intelligence?"
+EthicsChoice,Imagine that you were asked to write code for a purpose or product that you consider extremely unethical. Do you write the code anyway?
+EthicsReport,Do you report or otherwise call out the unethical code in question?
+EthicsResponsible,Who do you believe is ultimately most responsible for code that accomplishes something unethical?
+EthicalImplications,Do you believe that you have an obligation to consider the ethical implications of the code that you write?
+StackOverflowRecommend,How likely is it that you would recommend Stack Overflow overall to a friend or colleague? Where 0 is not likely at all and 10 is very likely.
+StackOverflowVisit,How frequently would you say you visit Stack Overflow?
+StackOverflowHasAccount,Do you have a Stack Overflow account?
+StackOverflowParticipate,"How frequently would you say you participate in Q&A on Stack Overflow? By participate we mean ask, answer, vote for, or comment on questions."
+StackOverflowJobs,Have you ever used or visited Stack Overflow Jobs?
+StackOverflowDevStory,Do you have an up-to-date Developer Story on Stack Overflow?
+StackOverflowJobsRecommend,How likely is it that you would recommend Stack Overflow Jobs to a friend or colleague? Where 0 is not likely at all and 10 is very likely.
+StackOverflowConsiderMember,Do you consider yourself a member of the Stack Overflow community?
+HypotheticalTools1,"Please rate your interest in participating in each of the following hypothetical tools on Stack Overflow, where 1 is not at all interested and 5 is extremely interested. A peer mentoring system"
+HypotheticalTools2,"Please rate your interest in participating in each of the following hypothetical tools on Stack Overflow, where 1 is not at all interested and 5 is extremely interested. A private area for people new to programming"
+HypotheticalTools3,"Please rate your interest in participating in each of the following hypothetical tools on Stack Overflow, where 1 is not at all interested and 5 is extremely interested. A programming-oriented blog platform"
+HypotheticalTools4,"Please rate your interest in participating in each of the following hypothetical tools on Stack Overflow, where 1 is not at all interested and 5 is extremely interested. An employer or job review system"
+HypotheticalTools5,"Please rate your interest in participating in each of the following hypothetical tools on Stack Overflow, where 1 is not at all interested and 5 is extremely interested. An area for Q&A related to career growth"
+WakeTime,"On days when you work, what time do you typically wake up?"
+HoursComputer,"On a typical day, how much time do you spend on a desktop or laptop computer?"
+HoursOutside,"On a typical day, how much time do you spend outside?"
+SkipMeals,"In a typical week, how many times do you skip a meal in order to be more productive?"
+ErgonomicDevices,What ergonomic furniture or devices do you use on a regular basis? Please select all that apply.
+Exercise,"In a typical week, how many times do you exercise?"
+Gender,"Which of the following do you currently identify as? Please select all that apply. If you prefer not to answer, you may leave this question blank."
+SexualOrientation,"Which of the following do you currently identify as? Please select all that apply. If you prefer not to answer, you may leave this question blank."
+EducationParents,"What is the highest level of education received by either of your parents? If you prefer not to answer, you may leave this question blank."
+RaceEthnicity,"Which of the following do you identify as? Please check all that apply. If you prefer not to answer, you may leave this question blank."
+Age,"What is your age? If you prefer not to answer, you may leave this question blank."
+Dependents,"Do you have any children or other dependents that you care for? If you prefer not to answer, you may leave this question blank."
+MilitaryUS,Are you currently serving or have you ever served in the U.S. Military?
+SurveyTooLong,How do you feel about the length of the survey that you just completed?
+SurveyEasy,How easy or difficult was this survey to complete?
