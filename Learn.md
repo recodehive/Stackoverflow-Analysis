@@ -8,7 +8,7 @@ Check out the Main Code: [Stackoverflow-Analysis](https://github.com/sanjay-kv/S
 
 Before installation, please make sure you have already installed the following tools:
 
-- [Git](https://git-scm.com/downloads) Learn Step by Step instruction here. https://recodehive.com/how-to-install-git-git-tutorial/
+- [Git](https://git-scm.com/downloads) Learn Step by Step instruction here. [recodehive](https://recodehive.com/how-to-install-git-git-tutorial/)
 - [Anaconda](https://anaconda.org/anaconda)
 - [Jupyter Package](https://anaconda.org/anaconda/jupyter)
 
@@ -16,7 +16,7 @@ Before installation, please make sure you have already installed the following t
 
 1. Fork the project
 2. Clone the project
-3. Download the orginal data from the ]drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
+3. Download the orginal data from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
 4. Open Jupyter Notebook and place the file in the project folder *Make sure you selecting the correct path*
 
 ## Finding Insights from Stackoverflow Developer Survey
@@ -57,7 +57,7 @@ LinkFree is licensed under the MIT License - see the [LICENSE](LICENSE) file for
 
 ## 💪 Thanks to all Contributors
 
-Thanks a lot for spending your time helping LinkFree grow. Thanks a lot! Keep rocking 🍻
+Thanks a lot for spending your time helping this project grow. Thanks a lot! Keep rocking 🍻
 
 <a href="https://github.com/sanjay-kv/Stackoverflow-Analysis/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=sanjay-kv/Stackoverflow-Analysis" />
