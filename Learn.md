@@ -15,9 +15,18 @@ Before installation, please make sure you have already installed the following t
 ## 🛠️ Installation Steps
 
 1. Fork the project
+Fork the sanjay-kv/Stackoverflow-Analysis/ repository
+Follow these instructions on [how to fork a repository](https://help.github.com/en/articles/fork-a-repo)
 2. Clone the project
+```
+git clone git@github.com:your-username/Stackoverflow-Analysis.git
+```
 3. Download the orginal data from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
 4. Open Jupyter Notebook and place the file in the project folder *Make sure you selecting the correct path*
+
+## Development
+
+We love your desire to give back, and want to make the process as welcoming to newcomers and experts as possible. We're working on developing more intuitive tutorials for individuals of all skill levels and expertise, so if you think the community would value from being walked through the steps you're going through please share! ❤️
 
 ## Finding Insights from Stackoverflow Developer Survey
 
