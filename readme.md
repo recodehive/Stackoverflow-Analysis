@@ -72,7 +72,6 @@ As a first step, we will clean the data by removing null values and outliers in 
 The questions that we answered as part of the analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
 
 - Project Presentation Sides -> https://www.canva.com/design/DAEdO-AUjRY/beEs8h-x6erz4d8s_XXsbw/view
-- Project Presentation video -> https://echo360.org.au/media/7977707f-3488-42ed-b144-f37ae3e88db1/public
 
 # <a name="2 Data Source">Data source:</a>
 
