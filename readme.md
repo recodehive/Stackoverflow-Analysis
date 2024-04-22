@@ -11,12 +11,12 @@
 <img src="https://img.shields.io/github/languages/code-size/Sanjayviswa/Stackoverflow-Analysis">
 
 # Stackoverflow Analysis Guidelines
-## 👨‍💻 Demo
+## 👨‍💻 Demo video
 
 
 https://user-images.githubusercontent.com/30715153/168960157-e9448ea4-206c-44c0-bbd5-5e4770c0411f.mp4
 
-
+You can start working with repo with simple changes and i have updated couple of issue . 
 Check out the Main Code: [Stackoverflow-Analysis](https://github.com/sanjay-kv/Stackoverflow-Analysis/blob/main/Stackoverflow_Survey_Analysis.ipynb)
 
 ## 👇 Prerequisites
