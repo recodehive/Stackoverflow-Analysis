@@ -30,14 +30,14 @@ Before installation, please make sure you have already installed the following t
 ## 🛠️ Installation Steps
 
 1. Fork the project
-Fork the sanjay-kv/Stackoverflow-Analysis/ repository
+Fork the sanjay-kv/Stackoverflow-Analysis/repository
 Follow these instructions on [how to fork a repository](https://help.github.com/en/articles/fork-a-repo)
 2. Clone the project
 ```
 git clone git@github.com:your-username/Stackoverflow-Analysis.git
 ```
 3. Download the orginal data from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
-4. Open Jupyter Notebook and place the file in the project folder *Make sure you selecting the correct path*
+4. Open Jupyter Notebook and place the file in the project folder. *Make sure you are selecting the correct path*
 
 ## Development
 
@@ -45,13 +45,13 @@ We love your desire to give back, and want to make the process as welcoming to n
 
 ## Finding Insights from Stackoverflow Developer Survey
 
-Stack overflow is a professional community for developers, Stackoverflow conducts a survey every year the collected data from 2011 has been available for open source on the web with the latest dataset 2020 released on March 5th, 2021. If the dataset analysed professionally using modern tools, would enable us to answer real-world questions effectively. The dataset has covered 275 questions in total.
+Stackoverflow is a professional community for developers, Stackoverflow conducts a survey every year the collected data from 2011 has been available for open source on the web with the latest dataset 2020 released on March 5th, 2021. If the dataset analysed professionally using modern tools, would enable us to answer real-world questions effectively. The dataset has covered 275 questions in total.
 
 ### Project Goal:
 
 1. To perform Analysis on 3 years Stackoverflow Dataset and get insights.
 2. To perform Data Analysis and answer the below questions.
-   + Impact of igher education on salary of the surveyed developers.
+   + Impact of higher education on salary of the surveyed developers.
    + Impact of education/experience/responsibilities on gender inequalities.
    + Impact on participation rate due to different ethnicity.
    + To find whether there is any difference between men and women's income.
