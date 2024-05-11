@@ -23,7 +23,10 @@ Check out the Main Code: [Stackoverflow-Analysis](https://github.com/sanjay-kv/S
 
 Before installation, please make sure you have already installed the following tools:
 
+
 - [Git](https://git-scm.com/downloads) Learn Git step-by-step by following the instructions provided [here](https://recodehive.com/how-to-install-git-git-tutorial/).
+- [Git](https://git-scm.com/downloads) Learn Step by Step instruction here.
+- [recodehive](https://recodehive.com/how-to-install-git-git-tutorial/)
 - [Anaconda](https://anaconda.org/anaconda)
 - [Jupyter Package](https://anaconda.org/anaconda/jupyter)
 
