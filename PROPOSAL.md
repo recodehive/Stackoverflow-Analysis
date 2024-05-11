@@ -59,10 +59,17 @@ The data is in CSV format, consisting of 252,199 observations and 62 variables.
 
 #### Additional Technical Details
 
-**Linear Regression (RFE techniques)**
-- Equation: \( y = O_1X + O_2 \)
+> Linear regression(RFE techniques) 
 
-**Root Mean Squared Error (RMSE) Calculations**
-- Formula: \( rmse = \sqrt{\left(\frac{1}{n}\right)\sum_{i=1}^{n}(y_{i} - x_{i})^{2}} \)
+$$
+y = O_1X + O_2
+$$
+
+> Root Mean Squared Error Calculations
+
+$$
+rmse = \sqrt{\left(\frac{1}{n}\right)\sum_{i=1}^{n}(y_{i} - x_{i})^{2}}
+$$
+
 
 Crafted by @Sanjayviswa.
