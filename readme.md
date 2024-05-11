@@ -23,6 +23,8 @@ Check out the Main Code: [Stackoverflow-Analysis](https://github.com/sanjay-kv/S
 
 Before installation, please make sure you have already installed the following tools:
 
+
+- [Git](https://git-scm.com/downloads) Learn Git step-by-step by following the instructions provided [here](https://recodehive.com/how-to-install-git-git-tutorial/).
 - [Git](https://git-scm.com/downloads) Learn Step by Step instruction here.
 - [recodehive](https://recodehive.com/how-to-install-git-git-tutorial/)
 - [Anaconda](https://anaconda.org/anaconda)
@@ -52,7 +54,7 @@ Stack overflow is a professional community for developers, Stackoverflow conduct
 
 1. To perform Analysis on 3 years Stackoverflow Dataset and get insights.
 2. To perform Data Analysis and answer the below questions.
-   + Impact of igher education on salary of the surveyed developers.
+   + Impact of higher education on salary of the surveyed developers.
    + Impact of education/experience/responsibilities on gender inequalities.
    + Impact on participation rate due to different ethnicity.
    + To find whether there is any difference between men and women's income.
