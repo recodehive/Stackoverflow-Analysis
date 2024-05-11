@@ -36,9 +36,7 @@ Before installation, please make sure you have already installed the following t
 Fork the sanjay-kv/Stackoverflow-Analysis/ repository
 Follow these instructions on [how to fork a repository](https://help.github.com/en/articles/fork-a-repo)
 2. Clone the project
-```
 git clone git@github.com:your-username/Stackoverflow-Analysis.git
-```
 3. Download the orginal data from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
 4. Open Jupyter Notebook and place the file in the project folder *Make sure you selecting the correct path*
 
@@ -58,7 +56,7 @@ Stack overflow is a professional community for developers, Stackoverflow conduct
    + Impact of education/experience/responsibilities on gender inequalities.
    + Impact on participation rate due to different ethnicity.
    + To find whether there is any difference between men and women's income.
-   + Impact on the increase in popularity of a language in the current year due to developer’s interest in the previous year.
+   + Impact on the increase in popularity of a language in the current year due to developer's interest in the previous year.
 
 3. To perform data visualization on
 
@@ -87,7 +85,7 @@ The data is in a schema CSV file that consists of 252,199 observations and 62 va
 
 ###### Data Wrangling
 
-**Dealing Null Values**: As this is a developer survey and few questions left unanswered by the respondents as ‘*NA*’ or ‘*Not Applicable*’ so dealing with null values is important to get precise information. Data conversion/ manipulation is also required, as the developer responded to the survey through radio buttons rather than yes or no pattern(Univariate analysis).
+**Dealing Null Values**: As this is a developer survey and few questions left unanswered by the respondents as '*NA*' or '*Not Applicable*' so dealing with null values is important to get precise information. Data conversion/ manipulation is also required, as the developer responded to the survey through radio buttons rather than yes or no pattern(Univariate analysis).
 
 ###### Techniques expect to use in the project 
 
@@ -114,7 +112,6 @@ Thanks a lot for spending your time helping this project grow. Thanks a lot! Kee
 ## 🙏 Support
 
 This project needs a ⭐️ from you. Don't forget to leave a star ⭐️
-
 
 
 
