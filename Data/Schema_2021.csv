@@ -1,0 +1,107 @@
+qid,qname,question,force_resp,type,selector
+QID16,S0,"<div><span style=""font-size:19px;""><strong>Hello world! </strong></span></div>
+
+<div> </div>
+
+<div>Thank you for taking the 2021 Stack Overflow Developer Survey, the longest running survey of software developers (and anyone else who codes!) on Earth. </div>
+
+<div> </div>
+
+<div>As in previous years, anonymized results of the survey will be made publicly available under the Open Database License, where anyone can download and analyze the data. On that note, throughout the survey, certain answers you and your peers give will be treated as personally identifiable information, and therefore kept out of the anonymized results file. We'll call out each of those in the survey with a note saying ""This information will be kept private."" </div>
+
+<div> </div>
+
+<div>There are six sections in this survey. The 2nd, 3rd, and 4th sections will appear in a random order.</div><div><br></div>
+
+<div>   1. Basic Information</div>
+
+<div>   2. Education, Work, and Career</div>
+
+<div>   3. Technology and Tech Culture</div>
+
+<div>   4. Stack Overflow Usage + Community</div>
+
+<div>   5. Demographic Information </div>
+
+<div>   6. Final Questions</div>
+
+<div> 
+<div>Most questions in this survey are optional. Required questions are marked with *. This anonymous survey will take about 10 minutes to complete. We encourage you to complete it in one sitting.</div><div><br></div>
+</div>
+
+<div><strong>If you use security or ad-blocking plugins, you may see error messages</strong></div>
+
+<div>Our third-party software provider, Qualtrics, does not work well with certain ad blockers and security software. To avoid error messages that prevent you from taking the survey, please try specifically unblocking Qualtrics in your plugin or pausing the plugin while you take the survey. </div>
+
+<div> </div>
+
+<div>To begin, click <strong>Next.</strong></div>",FALSE,DB,TB
+QID12,MetaInfo,Browser Meta Info,FALSE,Meta,Browser
+QID1,S1,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Basic Information</span><br>
+<br>
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">The first section will focus on some basic information about who you are.<br>
+<br>
+Most questions in this section are required. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID2,MainBranch,"Which of the following options best describes you today? Here, by ""developer"" we mean ""someone who writes code."" <b>*</b>",TRUE,MC,SAVR
+QID24,Employment,Which of the following best describes your current <b>employment status</b>?,FALSE,MC,MAVR
+QID6,Country,"Where do you live? <span style=""font-weight: bolder;"">*</span>",TRUE,MC,DL
+QID7,US_State,<p>In which state or territory of the USA do you live? <i>This information will be kept private.</i></p>,FALSE,MC,DL
+QID9,UK_Country,In which part of the United Kingdom do you live? <i>This information will be kept private.</i>,FALSE,MC,DL
+QID190,S2,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Education, work, and career</span><br>
+<br>
+
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">This section will focus on your education, work, and career.<br>
+<br>
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID25,EdLevel,Which of the following best describes the highest level of formal education that you’ve completed? *,FALSE,MC,SAVR
+QID149,Age1stCode,"At what age did you write your first line of code or program? (e.g., webpage, Hello World, Scratch project) ",FALSE,MC,MAVR
+QID276,LearnCode,How did you learn to code? Select all that apply.,FALSE,MC,MAVR
+QID32,YearsCode,"Including any education, how many years have you been coding in total?",FALSE,MC,DL
+QID34,YearsCodePro,"NOT including education, how many years have you coded professionally (as a part of your work)?",FALSE,MC,DL
+QID31,DevType,Which of the following describes your current job? Please select all that apply.,FALSE,MC,MAVR
+QID29,OrgSize,Approximately how many people are employed by the company or organization you currently work for? ,FALSE,MC,MAVR
+QID50,Currency,"Which currency do you use day-to-day? If your answer is complicated, please pick the one you're most comfortable estimating in. *",TRUE,MC,SB
+QID51,CompTotal,"What is your current total compensation (salary, bonuses, and perks, before taxes and deductions), in ${q://QID50/ChoiceGroup/SelectedChoicesTextEntry}? Please enter a whole number in the box below, without any punctuation. If you are paid hourly, please estimate an equivalent weekly, monthly, or yearly salary. If you prefer not to answer, please leave the box empty.",FALSE,TE,SL
+QID52,CompFreq,"Is that compensation weekly, monthly, or yearly?",FALSE,MC,MAVR
+QID61,S3,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Tech and tech culture</span><br>
+<br>
+
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">The next set of questions will focus on technology and tech culture.<br>
+<br>
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID233,Language,"Which <b>programming, scripting, and markup languages</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the language and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID262,Database,"Which <b>database environments </b>have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the database and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID263,Platform,"Which <b>cloud platforms</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the platform and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID264,Webframe,"Which <strong>web frameworks </strong><span style=""font-weight: bolder;"">and libraries</span> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID265,MiscTech,"Which <b>other frameworks and libraries</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID275,ToolsTech,"Which <strong>tools</strong> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the technology and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID274,NEWCollabTools,"Which <strong>development environments</strong> did you use regularly over the past year, and which do you want to work with over the next year? Please check all that apply.",FALSE,Matrix,Likert
+QID71,OpSys,What is the primary operating system in which you work? *,FALSE,MC,SAVR
+QID243,NEWStuck,What do you do when you get stuck on a problem? Select all that apply.,FALSE,MC,MAVR
+QID91,S4,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Stack Overflow - usage and community</span><br>
+<br>
+
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">This section will focus on Stack Overflow usage and community questions.<br>
+<br>
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID266,NEWSOSites,Which of the following Stack Overflow sites have you visited? Select all that apply.,FALSE,MC,MAVR
+QID100,SOVisitFreq,How frequently would you say you visit Stack Overflow?,FALSE,MC,MAVR
+QID101,SOAccount,Do you have a Stack Overflow account?,FALSE,MC,MAVR
+QID102,SOPartFreq,"How frequently would you say you participate in Q&amp;A on Stack Overflow? By participate we mean ask, answer, vote for, or comment on questions.",FALSE,MC,MAVR
+QID106,SOComm,Do you consider yourself a member of the Stack Overflow community?,FALSE,MC,MAVR
+QID267,NEWOtherComms,Are you a member of any other online developer communities?,FALSE,MC,MAVR
+QID268,NEWOtherCommsNames,"Please name up to 5 other online developer communities you belong to, and indicate whether they are public (anyone can join) or private (invitation required).",FALSE,Matrix,Likert
+QID121,S5,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Demographics</span><br>
+<br>
+
+<p><span style=""font-size: 16px;"">All questions in this section are optional, you may leave questions blank if you prefer not to answer. </span></p><p><span style=""font-size: 16px;""><br></span></p><p><span style=""font-size: 16px;"">As a reminder, all reporting of the survey responses will be anonymized.</span></p>",FALSE,DB,TB
+QID127,Age,What is your age?,FALSE,MC,MAVR
+QID122,Gender,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID153,Trans,Do you identify as transgender?,FALSE,MC,MAVR
+QID136,Sexuality,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID126,Ethnicity,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID124,Accessibility,"Which of the following describe you, if any? Please check all that apply. ",FALSE,MC,MAVR
+QID125,MentalHealth,"Which of the following describe you, if any? Please check all that apply. ",FALSE,MC,MAVR
+QID131,S6,"<span style=""font-size:22px;""><strong>Final Questions</strong></span><div><span style=""font-family: arial, helvetica, sans-serif; font-size: 16px;""><br></span></div><div><span style=""font-family: arial, helvetica, sans-serif; font-size: 16px;"">You're almost done!</span></div>",FALSE,DB,TB
+QID132,SurveyLength,How do you feel about the length of the survey this year?,FALSE,MC,MAVR
+QID133,SurveyEase,How easy or difficult was this survey to complete?,FALSE,MC,MAVR

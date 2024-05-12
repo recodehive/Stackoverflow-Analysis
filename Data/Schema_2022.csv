@@ -1,0 +1,143 @@
+qid,qname,question,force_resp,type,selector
+QID16,S0,"<div><span style=""font-size:19px;""><strong>Hello world! </strong></span></div>
+
+<div> </div>
+
+<div>Thank you for taking the 2022 Stack Overflow Developer Survey, the longest running survey of software developers (and anyone else who codes!) on Earth. </div>
+
+<div> </div>
+
+<div>As in previous years, anonymized results of the survey will be made publicly available under the Open Database License, where anyone can download and analyze the data. On that note, throughout the survey, certain answers you and your peers give will be treated as personally identifiable information, and therefore kept out of the anonymized results file. We'll call out each of those in the survey with a note saying ""This information will be kept private."" </div>
+
+<div> </div>
+
+<div>There are seven sections in this survey. The 2nd, 3rd, and 4th sections will appear in a random order.</div><div><br></div>
+
+<div>   1. Basic Information</div>
+
+<div>   2. Education, Work, and Career</div>
+
+<div>   3. Technology and Tech Culture</div>
+
+<div>   4. Stack Overflow Usage + Community</div>
+
+<div>   5. Demographic Information </div>
+
+<div>   6. Professional Developer Series (Optional)</div><div>   7. Final Questions</div>
+
+<div> 
+<div>Most questions in this survey are optional. Required questions are marked with *. This anonymous survey will take about 10 minutes to complete. We encourage you to complete it in one sitting.</div><div><br></div>
+</div>
+
+<div><strong>If you use security or ad-blocking plugins, you may see error messages</strong></div>
+
+<div>Our third-party software provider, Qualtrics, does not work well with certain ad blockers and security software. To avoid error messages that prevent you from taking the survey, please try specifically unblocking Qualtrics in your plugin or pausing the plugin while you take the survey. </div>
+
+<div> </div>
+
+<div>To begin, click <strong>Next.</strong></div>",FALSE,DB,TB
+QID12,MetaInfo,Browser Meta Info,FALSE,Meta,Browser
+QID1,S1,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Basic Information</span><br>
+<br>
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">The first section will focus on some basic information about who you are.<br>
+<br>
+Most questions in this section are required. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID2,MainBranch,"Which of the following options best describes you today? Here, by ""developer"" we mean ""someone who writes code."" <b>*</b>",TRUE,MC,SAVR
+QID296,Employment,Which of the following best describes your current employment status?,FALSE,MC,MAVR
+QID308,RemoteWork,Which best describes your current work situation?,FALSE,MC,SAVR
+QID297,CodingActivities,Which of the following best describes the code you write outside of work? Select all that apply.,FALSE,MC,MAVR
+QID190,S2,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Education, work, and career</span><br />
+ 
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">This section will focus on your education, work, and career.<br />
+<br />
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID25,EdLevel,Which of the following best describes the highest level of formal education that you’ve completed? *,FALSE,MC,SAVR
+QID276,LearnCode,How did you learn to code? Select all that apply.,FALSE,MC,MAVR
+QID281,LearnCodeOnline,What online resources do you use to learn to code? Select all that apply.,FALSE,MC,MAVR
+QID306,LearnCodeCoursesCert,What online courses or certifications do you use to learn to code? Select all that apply.,FALSE,MC,MAVR
+QID32,YearsCode,"Including any education, how many years have you been coding in total?",FALSE,MC,DL
+QID34,YearsCodePro,"NOT including education, how many years have you coded professionally (as a part of your work)?",FALSE,MC,DL
+QID31,DevType,Which of the following describes your current job? Please select all that apply.,FALSE,MC,MAVR
+QID29,OrgSize,Approximately how many people are employed by the company or organization you currently work for? ,FALSE,MC,MAVR
+QID278,PurchaseInfluence,"What level of influence do you, personally, have over new technology purchases at your organization?",FALSE,MC,SAVR
+QID279,BuyNewTool,"When buying a new tool or software, how do you discover and research available solutions? Select all that apply.",FALSE,MC,MAVR
+QID6,Country,"Where do you live? <span style=""font-weight: bolder;"">*</span>",TRUE,MC,DL
+QID50,Currency,"Which currency do you use day-to-day? If your answer is complicated, please pick the one you're most comfortable estimating in. *",TRUE,MC,DL
+QID51,CompTotal,"What is your current total compensation (salary, bonuses, and perks, before taxes and deductions)? Please enter a whole number in the box below, without any punctuation.  If you are paid hourly, please estimate an equivalent weekly, monthly, or yearly salary. If you prefer not to answer, please leave the box empty.",FALSE,TE,SL
+QID52,CompFreq,"Is that compensation weekly, monthly, or yearly?",FALSE,MC,MAVR
+QID61,S3,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Tech and tech culture</span><br>
+<br>
+
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">The next set of questions will focus on technology and tech culture.<br>
+<br>
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID233,Language,"Which <b>programming, scripting, and markup languages</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the language and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID262,Database,"Which <b>database environments </b>have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the database and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID263,Platform,"Which <b>cloud platforms</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the platform and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID264,Webframe,"Which <b>web frameworks and web technologies</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID265,MiscTech,"Which <b>other frameworks and libraries</b> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the framework and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID275,ToolsTech,"Which <b>developer </b><strong>tools</strong> have you done extensive development work in over the past year, and which do you want to work in over the next year? (If you both worked with the technology and want to continue to do so, please check both boxes in that row.)",FALSE,Matrix,Likert
+QID274,NEWCollabTools,"Which <strong>development environments</strong> did you use regularly over the past year, and which do you want to work with over the next year? Please check all that apply.",FALSE,Matrix,Likert
+QID71,OpSys,What is the primary <b>operating system</b> in which you work? *,FALSE,Matrix,Likert
+QID283,VersionControlSystem,What are the primary <b>version control systems</b> you use? Select all that apply.,FALSE,MC,MAVR
+QID284,VCInteraction,How do you interact with your version control system? Select all that apply.,FALSE,MC,MAVR
+QID285,VCHosting,What version control hosting service are you using?,FALSE,Matrix,Likert
+QID282,OfficeStackAsync,"Which <b>collaborative work management tools</b> did you use regularly over the past year, and which do you want to work with over the next year? Select all that apply",FALSE,Matrix,Likert
+QID307,OfficeStackSync,"Which <b>communication tools</b> did you use regularly over the past year, and which do you want to work with over the next year? Select all that apply",FALSE,Matrix,Likert
+QID305,Blockchain,"How favorable are you about blockchain, crypto, and decentralization?",FALSE,MC,SAVR
+QID91,S4,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Stack Overflow - usage and community</span><br>
+<br>
+
+<p><span style=""font-size:16px; font-family:arial,helvetica,sans-serif;"">This section will focus on Stack Overflow usage and community questions.<br>
+<br>
+Most questions in this section are optional. Required questions are noted with *.</span></p>",FALSE,DB,TB
+QID266,NEWSOSites,Which of the following Stack Overflow sites have you visited? Select all that apply.,FALSE,MC,MAVR
+QID100,SOVisitFreq,How frequently would you say you visit Stack Overflow?,FALSE,MC,MAVR
+QID101,SOAccount,Do you have a Stack Overflow account?,FALSE,MC,MAVR
+QID102,SOPartFreq,"How frequently would you say you participate in Q&amp;A on Stack Overflow? By participate we mean ask, answer, vote for, or comment on questions.",FALSE,MC,MAVR
+QID106,SOComm,Do you consider yourself a member of the Stack Overflow community?,FALSE,MC,MAVR
+QID121,S5,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Demographics</span><br>
+<br>
+
+<p><span style=""font-size: 16px;"">All questions in this section are optional, you may leave questions blank if you prefer not to answer. </span></p><p><span style=""font-size: 16px;""><br></span></p><p><span style=""font-size: 16px;"">As a reminder, all reporting of the survey responses will be anonymized.</span></p>",FALSE,DB,TB
+QID127,Age,What is your age?,FALSE,MC,MAVR
+QID122,Gender,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID153,Trans,Do you identify as transgender?,FALSE,MC,MAVR
+QID136,Sexuality,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID126,Ethnicity,"Which of the following describe you, if any? Please check all that apply.",FALSE,MC,MAVR
+QID124,Accessibility,"Which of the following describe you, if any? Please check all that apply. ",FALSE,MC,MAVR
+QID125,MentalHealth,"Which of the following describe you, if any? Please check all that apply. ",FALSE,MC,MAVR
+QID295,S6,"<span style=""font-size:22px; font-family: arial,helvetica,sans-serif; font-weight: 700;"">Professional Developer Series</span><br>
+ 
+<p><span style=""font-size: 16px;""></span></p>In one of our previous pulse surveys, we saw that people valued being productive and having growth opportunities at work*. By adding a <b>Professional Developer Series </b>to this year's survey we want to better understand the things that may impact your productivity and opportunities to learn. <br><br>Like the rest of the survey, your responses are completely anonymous.<p><span style=""font-size: 16px;""></span></p>
+
+<p> </p>
+
+<p><span style=""font-size: 16px;"">Blog post - <a href=""https://stackoverflow.blog/2021/12/07/new-data-what-developers-look-for-in-future-job-opportunities/"">New data: What developers look for in future job opportunities</a> - December 7, 2021</span></p>",FALSE,DB,TB
+QID299,TBranch,"<span style=""font-size:16px;"">Would you like to participate in the Professional Developer Series?</span>",TRUE,MC,SAVR
+QID287,ICorPM,Are you an independent contributor or people manager?,FALSE,MC,SAVR
+QID288,WorkExp,How many years of working experience do you have?,FALSE,Slider,HSLIDER
+QID289,Knowledge,Please rate your level of agreement with the following statement:,FALSE,Matrix,Likert
+QID290,Frequency,How frequently do you experience each of the following?,FALSE,Matrix,Likert
+QID291,TimeSearching,"On an average day, how much time do you typically spend searching for answers or solutions to problems you encounter at work? (This includes time spent searching on your own, asking a colleague, and waiting for a response).",FALSE,MC,SAVR
+QID292,TimeAnswering,"On an average day, how much time do you typically spend answering questions you get asked at work?",FALSE,MC,SAVR
+QID293,Onboarding,The time it takes to onboard new hires at my company is:,FALSE,MC,SAVR
+QID304,ProfessionalTech,My company has:,FALSE,MC,MAVR
+QID286,SOTeamsUsage,Does your team use Stack Overflow for Teams?,FALSE,MC,SAVR
+QID294,TrueFalse,Last few questions...,FALSE,Matrix,Likert
+QID131,S7,"<span style=""font-size:22px;""><strong>Final Questions</strong></span><div><br></div>",FALSE,DB,TB
+QID132,SurveyLength,How do you feel about the length of the survey this year?,FALSE,MC,MAVR
+QID133,SurveyEase,How easy or difficult was this survey to complete?,FALSE,MC,MAVR
+QID289,Knowledge_1,I have interactions with people outside of my immediate team.,NA,MC,MAVR
+QID289,Knowledge_2,"Knowledge silos prevent me from getting ideas across the organization (i.e., one individual or team has information that isn't shared with others)",NA,MC,MAVR
+QID289,Knowledge_3,I can find up-to-date information within my organization to help me do my job.,NA,MC,MAVR
+QID289,Knowledge_4,I am able to quickly find answers to my questions with existing tools and resources.,NA,MC,MAVR
+QID289,Knowledge_5,I know which system or resource to use to find information and answers to questions I have.,NA,MC,MAVR
+QID289,Knowledge_6,I often find myself answering questions that I’ve already answered before.,NA,MC,MAVR
+QID289,Knowledge_7,Waiting on answers to questions often causes interruptions and disrupts my workflow.,NA,MC,MAVR
+QID290,Frequency_1,Needing help from people outside of your immediate team?,NA,MC,MAVR
+QID290,Frequency_2,Interacting with people outside of your immediate team?,NA,MC,MAVR
+QID290,Frequency_3,Encountering knowledge silos (where one individual or team has information that's not shared or distributed with other individuals or teams) at work?,NA,MC,MAVR
+QID294,TrueFalse_1,Are you involved in supporting new hires during their onboarding?,NA,MC,MAVR
+QID294,TrueFalse_2,Do you use learning resources provided by your employer?,NA,MC,MAVR
+QID294,TrueFalse_3,Does your employer give you time to learn new skills?,NA,MC,MAVR
