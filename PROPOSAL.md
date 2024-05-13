@@ -44,7 +44,7 @@ The data is in CSV format, consisting of 252,199 observations and 62 variables.
 #### Project Plan
 
 **Week 8:** Project Base Setup
-- Source control setup on [GitHub](https://github.com/Sanjayviswa/Stackoverflow_survey_Analysis)
+- Source control setup on [GitHub](https://github.com/Recode-Hive/Stackoverflow-Analysis)
 - Project Management using tools like MS Project
 - Complete Data Wrangling & Basic Analysis
 
@@ -90,6 +90,6 @@ $$
   - **Feature Requests:** Suggest new features or improvements to further enhance the project.
 - **How to Contribute:** To contribute, simply fork the repository, make your changes, and submit a pull request. Be sure to follow the contribution guidelines outlined in the repository.
 - **Contributors Recognition:** We greatly appreciate all contributions to this project and will acknowledge contributors in the README file.
-- **Join the Discussion:** Feel free to join the discussion on our [GitHub repository](https://github.com/Sanjayviswa/Stackoverflow_survey_Analysis) to share your ideas, ask questions, or collaborate with other contributors.
+- **Join the Discussion:** Feel free to join the discussion on our [GitHub repository](https://github.com/Recode-Hive/Stackoverflow-Analysis) to share your ideas, ask questions, or collaborate with other contributors.
 
 Crafted by @Sanjayviswa.
