@@ -48,7 +48,7 @@ Data wrangling tasks include handling null values and converting data for analys
 
 ## 👨‍💻 Contributing
 
-- Contributions are greatly appreciated. Check out our contribution guidelines (yet to be updated) for more information.
+- Contributions are greatly appreciated. Check out our [Contribution Guidelines](/CONTRIBUTING.md)
 
 ## 🛡️ License
 
