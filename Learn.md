@@ -75,11 +75,12 @@ As a first step, we will clean the data by removing null values and outliers in 
 The questions that we answered as part of the analysis were given in the `Data analysis and visualization section`. Please refer to the Jupyter notebook file for all the codes. This `readme.md` file explains the key steps and results that we got as part of our project.
 
 
-# <a name="2 Data Source">Data source:</a>
+<h1 id="2 Data Source">Data Source</h1>
 
 The dataset is very diverse and came from a Stack overflow developer survey from 180 countries. Stack overflow has data collected through surveys from 2011 to 2020. We choose 2018,2019 and 2020 to analyze for the projects. The participants mostly from the US, India, and EMEA regions. The majority of the survey respondents had a background of developer/ coding experience. We performed various analysis and our key results are given in the `Data Analysis` section.
 
 Dataset can be downloaded from the mentioned below link:
+
 
 **Download Link** ->   https://insights.stackoverflow.com/survey
 
@@ -89,7 +90,7 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 
  The reason why we chose this dataset is because of its diverse nature and it was completely uncleaned.  We, as a developer, use Stack overflow to find answers for most of the questions we get. That encouraged us to explore and derive key insights from the survey results. Also, the Insights can be used for a better understanding of the information technology and hiring employees and job seekers for preparing the career resume building.
 
-# <a name="3 Key Insights">Key Insights</a>
+<h1 id="3 Key Insights">Key Insights</h1>
 
 1. JavaScript has maintained its stronghold as the most commonly used programming language. Almost 70% of the respondents are using Javascript. HTML/CSS stands as the second most popular language with about 63%
 2. About `55%` of respondents identify themselves as **full-stack developers**, and about `20%` consider themselves as **mobile developers**.
@@ -101,10 +102,8 @@ The data are available in the CSV format ranging from 40 to 150 MB with data of 
 8. Most of the Data scientist  respondents came from United States(1550). And the country which has the second highest number of data scientist is India(540)
 9. The country which pays the highest salary for Data scientist is Ireland($275,851). The second highest was Luxembourg($272,796). Australia pays about ($146,803)
 
-
-
-# <a name="4 Data Cleaning">Data Cleaning</a>
-
+<h1 id="4 Data Cleaning">Data Cleaning</h1>
+      
 <img src="https://recodehive.com/wp-content/uploads/2021/05/Data-Cleaning-1024x361.png">
 
 As our first step, we started gathering information on all three datasets and looked into the columns that answer the questions we have as part of our research. The mentioned below columns were choosen as key factors for our analysis
@@ -126,7 +125,8 @@ Some of the column names were not easily understandable, for example, the column
 |     JobSat      | CurrentJobSatis |
 |     JobSeek     |    JobStatus    |
 
-## <a name="4.1 Data Refactoring">4.1) Data Refactoring</a>
+
+<h2 id="4.1 Data Refactoring">4.1) Data Refactoring</h2>
 
 Most of the column values were more detailed and were difficult for analze. For instance, the values in the `EdLevel` column were as below.
 
@@ -184,7 +184,7 @@ Professional     1037
 
 Similary, we followed the same for other columns such as `Gender` `Profession` `UndergradMajor` `JobStatus` `Employment`
 
-## <a name="4.2 Categorising the data">4.2) Categorising the data</a>
+<h2 id="4.2 Categorising the data">4.2) Categorising the data</h2>
 
 One of our column `Ethnicity` had 173 values and had various subcategories. Some of the values are given below for reference.
 
@@ -238,7 +238,7 @@ df2020.loc[df['Ethnicity'].str.match('Multiracial') == True, 'Ethnicity'] = 'Mul
 
 The above process has been carried out for all three data frames `2018` `2019` `2020`
 
-## <a name="4.3 Handling the null values">4.3) Handling the null values</a>
+<h2 id="4.3 Handling the null values">4.3) Handling the null values</h2>
 
 <img src="https://recodehive.com/wp-content/uploads/2021/05/Message-from-Founder-1024x576.png">
 
@@ -516,7 +516,7 @@ Top 2 features negatively effecting Job Satisfaction are age, country. So, in th
 - UndergradMajor and other Science,are mostly satisfied.
 - Most satisfied countries Malta, Ghana, Cyprus.
 
-# <a name="7 Conclusion">Conclusion</a>
+<h1 id="7 Conclusion">Conclusion:</h1>
 
 Overall, we performed various analyses on the Stack overflow developer survey and derived insights from it. 
 We found which country has the highest no of respondents, which is the most popular language, education level of respondents, different roles of developers, and so on.
