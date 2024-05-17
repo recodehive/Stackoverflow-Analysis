@@ -66,8 +66,7 @@
   </ol>
 </details>
 
-<h1><a name="1-Project-Description">Project description:</a></h1>
-
+<h1 id="1-Project-Description">Project description:</h1>
 
 Stack overflow is a professional community for developers. They conduct developer surveys every year since 2011, and the collected data is available open-source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developers use.We also can find the developer role which pays the highest salary. Our project is to analyze the last three years of the developer survey and gather meaningful insights from it.
 
