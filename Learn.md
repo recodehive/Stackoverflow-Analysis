@@ -20,7 +20,7 @@
   <summary><h2 style="display: inline-block">Table of Contents</h2></summary>
   <ol>
     <li>
-      <a href="#1 Project Description">Project Description</a>
+      <a href="#1-Project-Description">Project Description</a>
     </li>
     <li>
       <a href="#2 Data Source">Data Source</a>
@@ -66,7 +66,7 @@
   </ol>
 </details>
 
-# <a name="1 Project Description">Project description:</a>
+# <a name="1-Project-Description">Project description:</a>
 
 
 Stack overflow is a professional community for developers. They conduct developer surveys every year since 2011, and the collected data is available open-source on the web. The latest dataset 2020 was released on March 5th, 2021. With proper analysis, the Dataset would help us to answer real-world questions. For instance, we can find the most popular language that the developers use.We also can find the developer role which pays the highest salary. Our project is to analyze the last three years of the developer survey and gather meaningful insights from it.
