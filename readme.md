@@ -25,7 +25,17 @@ We welcome contributions from all levels of experience. If you think the communi
 
 ## Finding Insights from Stack Overflow Developer Survey
 
+
+1. To perform Analysis on 3 years Stackoverflow Dataset and get insights.
+2. To perform Data Analysis and answer the below questions.
+   + Impact of higher education on salary of the surveyed developers.
+   + Impact of education/experience/responsibilities on gender inequalities.
+   + Impact on participation rate due to different ethnicity.
+   + To find whether there is any difference between men and women's income.
+   + Impact on the increase in popularity of a language in the current year due to developer’s interest in the previous year.
+
 Stack Overflow is a professional community for developers, conducting a survey annually. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
+
 
 ### Project Goals:
 
