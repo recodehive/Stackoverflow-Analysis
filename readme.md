@@ -1,4 +1,19 @@
-# Stack Overflow Analysis Guidelines
+# Stackoverflow Analysis Guidelines
+## 👨‍💻 Demo
+
+<img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png" align="left" height="100" width="450" >
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+<img src="https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis">
+<img src="https://img.shields.io/github/languages/code-size/Sanjayviswa/Stackoverflow-Analysis">
+
+<!-- TABLE OF CONTENTS -->
 
 ## 👨‍💻 Demo Video
 
