@@ -417,9 +417,9 @@ In 2019, the top three countries which have a highest mean annual salary of a da
 
 <img src="Data/Images/top paying countries.png">
 
-# <a name="6 Machine Learning">6 Machine Learning</a>
+<h1 id="6 Machine Learning">6 Machine Learning</h1>
 
-### <a name="6.1 Predicting the growth of the language">6.1) Predicting the growth of the language</a>
+<h2 id="6.1 Predicting the growth of the language">6.1) Predicting the growth of the language</h2>
 
 ### Predicting the growth of languages for upcoming years based on survey answers of previous years
 
@@ -437,8 +437,7 @@ Unfortunately, we have only 3 years of dataset, there is not enough data to use 
 With a very small number of observations, there is insufficient data to split the observations into training and testing. 
 More observations are needed to build the predictive model. **Further exploration in future projects may be needed to explain this question**
 
-
-### <a name="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</a>
+<h2 id="6.2 Predicting the salary of data scientist">6.2) Predicting the salary of data scientist</h2>
 
 To predict the salary of data scientists, the target SalaryUSD is divided into 2 groups: SalaryUSD < median and SalaryUSD >= median, and which are converted to a categorical variable by label encoding.
 
@@ -460,7 +459,8 @@ The best model is Logistic Regression with R2 just approximately 0.4.
 It is not confidently said that Logistic Regression is a good fit to predict the salary of Data Scientists.
 
 
-#### <a name="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1) Computing Hamming Loss and Jacard Score on the above models</a>
+
+<h2 id="6.2.1 Computing Hamming Loss and Jacard Score on the above models">6.2.1) Computing Hamming Loss and Jacard Score on the above models</h2>
 
 - Hamming loss is the fraction of labels that are incorrectly predicted ( evaluation metrics for a classifier model.)<br>
   Hamming loss value range between 0 and 1, Having HL less is the best.
@@ -479,7 +479,8 @@ It is not confidently said that Logistic Regression is a good fit to predict the
 It has been found that better Hamming loss has been found in Logistic Regression and Linear SVC which is 0.14815
 Jaccard similarity scores gives us the distribution of label sets when using the models.
 
-### <a name="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</a>
+<h2 id="6.3 Predicting what causing Job Satisfaction">6.3) Predicting what causing Job Satisfaction</h2>
+
 An examination of work satisfaction variables based on Stack Over Flow survey data from 2020.
 Job satisfaction can be defined by factors such as compensation, benefits, work environment, team members, work-life balance, education level, place, and so on. 
 - Best mean cross-validation score: -0.262
