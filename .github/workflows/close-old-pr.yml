@@ -1,0 +1,53 @@
+name: Close Stale PRs Without Owner Comments
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs daily at midnight
+
+jobs:
+  close_stale_prs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Close Stale PRs Without Owner Comments
+        run: |
+          const daysThreshold = 30;
+          const github = require('@actions/github');
+          const { Octokit } = require('@octokit/rest');
+          const octokit = new Octokit({ auth: process.env.GITHUB_TOKEN });
+          const owner = github.context.repo.owner;
+          const repo = github.context.repo.repo;
+          const now = new Date();
+          const thresholdDate = new Date(now.setDate(now.getDate() - daysThreshold));
+          
+          async function run() {
+            const { data: pullRequests } = await octokit.pulls.list({ owner, repo, state: 'open' });
+            for (const pr of pullRequests) {
+              const { data: comments } = await octokit.issues.listComments({ owner, repo, issue_number: pr.number });
+              const ownerComments = comments.filter(comment => comment.user.login === owner);
+              const recentOwnerComment = ownerComments.find(comment => new Date(comment.created_at) > thresholdDate);
+              
+              if (!recentOwnerComment) {
+                await octokit.pulls.update({ owner, repo, pull_number: pr.number, state: 'closed' });
+                await octokit.issues.createComment({
+                  owner,
+                  repo,
+                  issue_number: pr.number,
+                  body: "This pull request has been closed because there has been no comment from the repository owner for the last 30 days. Please reach out to the maintainers if you have any questions."
+                });
+              }
+            }
+          }
+          
+          run().catch(err => {
+            console.error(err);
+            process.exit(1);
+          });
+
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
