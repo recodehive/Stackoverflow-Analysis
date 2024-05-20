@@ -22,7 +22,7 @@ jobs:
         if: ${{ steps.check_label.outcome == 'success' }}
         uses: actions/github-script@v5
         with:
-          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const issue = context.payload.issue;
             const { owner, repo } = context.repo;
@@ -39,7 +39,7 @@ jobs:
         if: ${{ steps.check_label.outcome == 'success' }}
         uses: actions/github-script@v5
         with:
-          github-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const issue = context.payload.issue;
             await github.rest.issues.update({
@@ -55,7 +55,7 @@ jobs:
         with:
           organization: Recode-Hive
           label: invite me to the community
-          repo-token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
           comment: |
             <b>Invitation sent to join the GitHub Organisation. Welcome to the community 🎉</b><br><br>
             Don't forget after accepting to make it public so it appears on your GitHub profile for everyone else to see. You can do this by finding your name in the GitHub organisation list and change the dropdown to public https://github.com/orgs/Recode-Hive/people<br><br>
