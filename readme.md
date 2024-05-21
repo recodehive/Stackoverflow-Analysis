@@ -72,7 +72,7 @@ Data wrangling tasks include handling null values and converting data for analys
 
 ## 👨‍💻 Contributing
 
-- Contributions are greatly appreciated. Check out our [Contribution Guidelines](/CONTRIBUTING.md)
+- Contributions are greatly appreciated. Check out our [Contribution Guidelines](https://github.com/Recode-Hive/Stackoverflow-Analysis/tree/main/Readme)
 
 ## 🛡️ License
 
