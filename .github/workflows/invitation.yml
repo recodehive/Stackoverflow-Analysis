@@ -59,6 +59,5 @@ jobs:
           comment: |
             <b>Invitation sent to join the GitHub Organisation. Welcome to the community 🎉</b><br><br>
             Don't forget after accepting to make it public so it appears on your GitHub profile for everyone else to see. You can do this by finding your name in the GitHub organisation list and change the dropdown to public https://github.com/orgs/Recode-Hive/people<br><br>
-            I hope that helps
         env:
           INVITE_TOKEN: ${{ secrets.INVITE_TOKEN }}
