@@ -14,7 +14,7 @@
 
 <!-- TABLE OF CONTENTS -->
 
-## 👨‍💻 Demo Video
+## 👨‍💻 Demo Video 
 
 [Watch the demo video](https://user-images.githubusercontent.com/30715153/168960157-e9448ea4-206c-44c0-bbd5-5e4770c0411f.mp4)
 
