@@ -1,5 +1,5 @@
 # Web Page for StackOverflow Analysis Using Streamlit
-* Author: Leena Goyal [@Leena2403](https://www.github.com/Leena2403) and Nikita [@nikitababb036@gmail.com](https://github.com/NIKITA320495)
+* Author: Leena Goyal [@Leena2403](https://www.github.com/Leena2403) and [Nikita](https://github.com/NIKITA320495)
 * Created on: May 20, 2024
 * Description: Data exploration & visualization on stackoverflow surveys conducted in 2018,2019,2020.
 * Curated dataset: Provided by StackOverflow Analysis
@@ -8,12 +8,12 @@
 #### Main Interface Look 
 ![](Visualizations/main-interface.png?raw=true)
 
-*Note* 
+##Note##
 The web app is still under construction. The authors are in the process of updating and bulding the complete web app.
 
 #### Steps To Run Streamlit Locally:
 - cloning
-  - firstly, fork the repository and then clone to your local files via vs code (for cloning press ctrl +shift+ p).
+  - firstly, fork the repository and then clone to your local files via vs code (for cloning press ctrl + shift + p).
   - ![](Visualizations/cloning-1.png?raw=true)
   - ![](Visualizations/cloning-2.png?raw=true)
 
@@ -21,6 +21,7 @@ The web app is still under construction. The authors are in the process of updat
   - locate the streamlit folder.
   - run the python -m streamlit run home.py in your cmd terminal.
   - ![](Visualizations/terminal.png?raw=true)
+
 # Solutions Provided
 
 - used streamlit along with some html and css to make the whole webpage.
@@ -84,14 +85,14 @@ We directly saved the cleaned and preprocessed datasets from the Jupyter Noteboo
 *Main Analysis*
 - [Main Analysis](https://github.com/NIKITA320495/Stackoverflow-Analysis/blob/main/streamlit/main_analysis.py) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
 - The main visualisations from our web app providing the png files for bar graphs, line plots and maps.
-- Districtwise plotting of crime along with the heat maps is present.
-- Vulnerable crime areas are included using records of victim analysis. Folium is being used to display the auto-generated html files.
+- The dedicated explanatory analysis is also present along with their functions.
+
 
 *Home*
 - [Home](https://github.com/NIKITA320495/Stackoverflow-Analysis/blob/main/streamlit/home.py) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
 - set the structure of our main interface.
 - we made a slidebar that gives an option to select from the year 2018,2019 and 2020.
-- it runs different functions based on the year such as if the selected year is 2018 it shows all the visualizations related to year 2018 and same with 2019 and 2020.
+- It runs different functions based on the year such as if the selected year is 2018 it shows all the visualizations related to year 2018 and same with 2019 and 2020.
   
 *Data Visualisations*:
 
