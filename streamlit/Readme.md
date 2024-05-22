@@ -13,13 +13,14 @@ The web app is still under construction. The authors are in the process of updat
 
 #### Steps To Run Streamlit Locally:
 - cloning
-  - firstly, fork the repository and then clone to your local files via vs code.
-  ![](streamlit/Visualizations/cloning-1.png)
-  - then ,
-  ![](streamlit/Visualizations/cloning-2.png)
+  - firstly, fork the repository and then clone to your local files via vs code (for cloning press ctrl +shift+ p).
+  - ![](Visualizations/cloning-1.png?raw=true)
+  - ![](Visualizations/cloning-2.png?raw=true)
 
 - terminal
-  
+  - locate the streamlit folder.
+  - run the python -m streamlit run home.py in your cmd terminal.
+  - ![](Visualizations/terminal.png?raw=true)
 # Solutions Provided
 
 - used streamlit along with some html and css to make the whole webpage.
@@ -71,23 +72,23 @@ We directly saved the cleaned and preprocessed datasets from the Jupyter Noteboo
 ## Folders and Files##
 
 *Visualisations*
-- [Visualisations](https://github.com/Leena2403/predictive-crime-analysis-first_prototype/tree/main/Visualisations) - it contains some of the visualizations of tha analysis and the graphs. the screenshots of our project and some templates.
+- [Visualisations](https://github.com/NIKITA320495/Stackoverflow-Analysis/tree/main/streamlit/Visualizations) - it contains some of the visualizations of tha analysis and the graphs. the screenshots of our project and some templates.
 
 
 *Functions*
-- [Functions](https://github.com/Leena2403/predictive-crime-analysis-first_prototype/tree/main/Visualisations) - Dedicated functions for all the analyses, and the predictions that are present in the main analysis file of the Jupyter Notebook, are created.
+- [Functions](https://github.com/NIKITA320495/Stackoverflow-Analysis/blob/main/streamlit/functions.py) - Dedicated functions for all the analyses, and the predictions that are present in the main analysis file of the Jupyter Notebook, are created.
 - Most of the functions are using Plotly library for the clear and better visuals.
 - These functions are flexible to be used with dataset of any year, given that the pre-processing stage is compatible with the existing dataframes.
 - some of the functions are plot_boxplot() for plotting the boxplot , plot_bar_plotly() for plotting the bargraph , plot_age_distribution() for plotting the age distribution , gender_vs _top5countries() for comparing and plotting the gender and top 5 countries respondants , and many more.
 
 *Main Analysis*
-- [Main Analysis](https://github.com/Leena2403/predictive-crime-analysis-first_prototype/tree/main/Visualisations) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
+- [Main Analysis](https://github.com/NIKITA320495/Stackoverflow-Analysis/blob/main/streamlit/main_analysis.py) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
 - The main visualisations from our web app providing the png files for bar graphs, line plots and maps.
 - Districtwise plotting of crime along with the heat maps is present.
 - Vulnerable crime areas are included using records of victim analysis. Folium is being used to display the auto-generated html files.
 
 *Home*
-- [Home](https://github.com/Leena2403/predictive-crime-analysis-first_prototype/tree/main/Visualisations) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
+- [Home](https://github.com/NIKITA320495/Stackoverflow-Analysis/blob/main/streamlit/home.py) - The main visualisations from our web app providing the png files for bar graphs, line plots, and maps.
 - set the structure of our main interface.
 - we made a slidebar that gives an option to select from the year 2018,2019 and 2020.
 - it runs different functions based on the year such as if the selected year is 2018 it shows all the visualizations related to year 2018 and same with 2019 and 2020.
@@ -98,22 +99,17 @@ If specific year is selected from the slidebar, it shows all the visualizations 
 First of all, it shows the data preview for the specific year, then all the  data visualizations are shown related to that year.
 some of the visualizations such as common for the all the year such as Top Gender Distributions, Distribution of Annual Salary for Top Countries, Geographical plot to show number of respondents in each country,Income vs gender, Ethnicity vs participation, gender vs participation,country wise data scientists presentation, Features of job selection, Education level vs salary,etc
 
-#### Top Gender Distribution
-![](Visualizations/district_heatmap.png)
-
 #### Distribution of annual salary for top countries 
-![](Visualizations/district_analyssi.png?raw=true)
-
+![](Visualizations/annual-salaries.png?raw=true)
 #### Income vs Gender
-![](Visualizations/criminal_analysis.png?raw=true)
-
+![](Visualizations/income-vs-gender.png?raw=true)
 #### Ethnicity vs participation
-![](Visualizations/district_map.png)
+![](Visualizations/ethenicity.png?raw=true)
 
 some of the visualizations are for comparing the data from all the year like Distribution of surveyors based on their developer role and  Programming language desired to work
 
 #### Distribution of surveyors based on their developer rol
-![](Visualizations/time_analysis.png)
+![](Visualizations/Screenshot.png?raw=true)
 
 #### Programming language desired to work
-![](Visualizations/police_perf.png)
+![](Visualizations/languages-desired.png?raw=true)
