@@ -11,9 +11,9 @@ import re
 
 data = pd.read_csv('df2020.csv')
 df2018 = pd.read_csv('df2018.csv')
-full_data2018 = pd.read_csv('../Data/survey_results_public_2018.csv')
-full_data2019=pd.read_csv('../Data/survey_results_public_2019.csv')
-full_df2020 = pd.read_csv('../Data/survey_results_public_2020.csv')
+full_data2018 = pd.read_csv('survey_results_sample_2018.csv')
+full_data2019=pd.read_csv('survey_results_sample_2019.csv')
+full_df2020 = pd.read_csv('survey_results_sample_2020.csv')
 df2019 = pd.read_csv('df2019.csv')
 df2020 = data[(data['SalaryUSD'] < 200000)]
 
