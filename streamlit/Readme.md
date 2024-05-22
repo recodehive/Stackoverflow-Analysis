@@ -14,7 +14,10 @@ The web app is still under construction. The authors are in the process of updat
 #### Steps To Run Streamlit Locally:
 - cloning
   - firstly, fork the repository and then clone to your local files via vs code.
-  ![](Visualizations/cloning 1.png?raw=true)
+  ![](streamlit/Visualizations/cloning-1.png)
+  - then ,
+  ![](streamlit/Visualizations/cloning-2.png)
+
 - terminal
   
 # Solutions Provided
