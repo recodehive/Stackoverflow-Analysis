@@ -100,17 +100,16 @@ If specific year is selected from the slidebar, it shows all the visualizations 
 First of all, it shows the data preview for the specific year, then all the  data visualizations are shown related to that year.
 some of the visualizations such as common for the all the year such as Top Gender Distributions, Distribution of Annual Salary for Top Countries, Geographical plot to show number of respondents in each country,Income vs gender, Ethnicity vs participation, gender vs participation,country wise data scientists presentation, Features of job selection, Education level vs salary,etc
 
-#### Distribution of annual salary for top countries 
+# Distribution of annual salary for top countries 
 ![](Visualizations/annual-salaries.png?raw=true)
-#### Income vs Gender
 ![](Visualizations/income-vs-gender.png?raw=true)
-#### Ethnicity vs participation
 ![](Visualizations/ethenicity.png?raw=true)
+![](Visualizations/geoplot.png?raw=true)
 
 some of the visualizations are for comparing the data from all the year like Distribution of surveyors based on their developer role and  Programming language desired to work
 
-#### Distribution of surveyors based on their developer rol
+# Distribution of surveyors based on their developer role
 ![](Visualizations/Screenshot.png?raw=true)
 
-#### Programming language desired to work
+# Programming language desired to work
 ![](Visualizations/languages-desired.png?raw=true)
