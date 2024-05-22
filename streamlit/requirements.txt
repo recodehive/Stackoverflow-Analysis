@@ -1,3 +1,6 @@
 streamlit
 pandas
 plotly
+pycountry
+scipy
+numpy
