@@ -1,4 +1,4 @@
-# Stackoverflow Analysis Guidelines
+# Stackoverflow Analysis Guidelines 
 
 <img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png" align="left" height="100" width="450" >
 <br>
