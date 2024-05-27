@@ -1,7 +1,7 @@
 name: Auto Comment on PR Merge
 
 on:
-  pull_request:
+  pull_request_target:
     types: [closed]
 
 permissions:
@@ -10,27 +10,28 @@ permissions:
 
 jobs:
   comment:
-    runs-on: ubuntu-latest
-    permissions:
-      pull-requests: write
     if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v2
-
-    - name: Add Comment to Issue
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
+     - name: Add Comment to Merged PR
+       run: |
         COMMENT=$(cat <<EOF
         {
           "body": "🎉 Your pull request has been successfully merged! 🎉 Thank you for your valuable contribution to our project. Your efforts are greatly appreciated. Feel free to reach out if you have any more contributions or if there's anything else we can assist you with. Keep up the fantastic work! 🚀"
         }
         EOF
         )
-        curl -X POST \
-          -H "Authorization: Bearer $GITHUB_TOKEN" \
+        RESPONSE=$(curl -s -o response.json -w "%{http_code}" \
+          -X POST \
+          -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
           -H "Accept: application/vnd.github.v3+json" \
           https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments \
-          -d "$COMMENT"
+          -d "$COMMENT")
+        cat response.json
+        if [ "$RESPONSE" -ne 201 ]; then
+          echo "Failed to add comment"
+          exit 1
+        fi
+       env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
