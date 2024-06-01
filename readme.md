@@ -30,7 +30,7 @@ Before installation, please ensure you have the following tools installed:
 
 1. **Fork the project**: Fork the `sanjay-kv/Stackoverflow-Analysis` repository. Follow these instructions on [how to fork a repository](https://help.github.com/en/articles/fork-a-repo).
 2. **Clone the project**: `git clone git@github.com:your-username/Stackoverflow-Analysis.git`
-3. **Download the original data** from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing)
+3. **Download the original data** from the [drive link](https://drive.google.com/drive/folders/13W20DfCW2W5GEeKTYTl7R6xV5hmPS2Do?usp=sharing).
 4. **Open Jupyter Notebook** and place the file in the project folder. Make sure you're selecting the correct path.
 
 ## Development
@@ -40,20 +40,20 @@ We welcome contributions from all levels of experience. If you think the communi
 ## Finding Insights from Stack Overflow Developer Survey
 
 
-1. To perform Analysis on 3 years Stackoverflow Dataset and get insights.
-2. To perform Data Analysis and answer the below questions.
-   + Impact of higher education on salary of the surveyed developers.
-   + Impact of education/experience/responsibilities on gender inequalities.
-   + Impact on participation rate due to different ethnicity.
-   + To find whether there is any difference between men and women's income.
-   + Impact on the increase in popularity of a language in the current year due to developer’s interest in the previous year.
+1. Objective: To perform Analysis on 3 years Stackoverflow dataset to gain insights.
+2. Goals:
+   + Analyze the impact of higher education on salary of the surveyed developers.
+   + Investigate the impact of education/experience/responsibilities on gender inequalities.
+   + Examine the impact on participation rates due to different ethnicities.
+   + Determine if there is a difference between men's and women's incomes.
+   + Analyze the increase in popularity of a language in the current year due to developer’s interest in the previous year.
 
-Stack Overflow is a professional community for developers, conducting a survey annually. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
+Stack Overflow is a professional community for developers, conducting an annual survey. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
 
 
 ### Project Goals:
 
-1. Perform Analysis on the last 3 years' Stack Overflow Dataset to extract insights.
+1. Perform Analysis on the last 3 years Stack Overflow dataset to extract insights.
 2. Analyze the impact of higher education, experience, and responsibilities on salary and gender inequalities.
 3. Investigate participation rates based on ethnicity and differences in income between men and women.
 4. Explore the popularity of programming languages and predict their growth based on survey responses.
