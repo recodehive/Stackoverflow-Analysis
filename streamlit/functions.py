@@ -263,7 +263,8 @@ def ai_graphs():
     st.title('AI Survey Responses')
     df = full_data2018[['AIDangerous', 'AIInteresting', 'AIResponsible', 'AIFuture']]
 
-    df = df.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+    # Correct replacement of applymap
+    df = df.apply(lambda col: col.map(lambda x: x.strip() if isinstance(x, str) else x) if col.dtype == 'object' else col)
 
     short_mapping = {
         'Algorithms making important decisions': 'Algorithms',
@@ -286,8 +287,7 @@ def ai_graphs():
     plot_value_counts_plotly('AIDangerous', df, col1)
     plot_value_counts_plotly('AIInteresting', df, col1)
     plot_value_counts_plotly('AIResponsible', df, col2)
-    plot_value_counts_plotly('AIFuture', df, col2)   
-
+    plot_value_counts_plotly('AIFuture', df, col2)
 
 def result_plot(data):
     new_index = data.Rates.sort_values(ascending=False).index
