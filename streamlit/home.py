@@ -10,6 +10,7 @@ from scipy import stats
 import random
 import functions as ff
 import main_analysis as main
+import os
 
 #######################################
 # DATA LOADING
@@ -17,20 +18,24 @@ import main_analysis as main
 
 st.set_page_config(layout='wide')
 
+# Determine the base path
+base_path = os.path.dirname(__file__)
+
 # Loading data files
-df = pd.read_csv('df2020.csv')
-df2018 = pd.read_csv('df2018.csv')
-full_data2018 = pd.read_csv('survey_results_sample_2018.csv')
-full_data2019 = pd.read_csv('survey_results_sample_2019.csv')
-full_df2020 = pd.read_csv('survey_results_sample_2020.csv')
-df2019 = pd.read_csv('df2019.csv')
+df = pd.read_csv(os.path.join(base_path, 'df2020.csv'))
+df2018 = pd.read_csv(os.path.join(base_path, 'df2018.csv'))
+full_data2018 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2018.csv'))
+full_data2019 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2019.csv'))
+full_df2020 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2020.csv'))
+df2019 = pd.read_csv(os.path.join(base_path, 'df2019.csv'))
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
 
 # Load CSS file
 def local_css(file_name):
-    with open(file_name) as f:
+    css_path = os.path.join(base_path, file_name)
+    with open(css_path) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
 local_css("style.css")
@@ -61,7 +66,7 @@ df2018['Gender'] = df2018['Gender'].replace({"Male": "Man", "Female": "Woman"})
 full_data2018.rename(columns={'ConvertedSalary': 'SalaryUSD'}, inplace=True)
 
 # Strip leading and trailing whitespace from all columns in df_ai
-df_ai = df_ai.applymap(lambda x: x.strip() if isinstance(x, str) else x)
+df_ai = df_ai.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
 
 # Mapping for shorter versions
 short_mapping = {
