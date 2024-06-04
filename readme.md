@@ -7,7 +7,6 @@
 <br>
 <br>
 <br>
-<br>
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 <img src="https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis">
