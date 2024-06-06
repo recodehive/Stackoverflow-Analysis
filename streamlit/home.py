@@ -8,9 +8,6 @@ import numpy as np
 from scipy.stats import norm
 from scipy import stats
 import random
-import functions as ff
-import main_analysis as main
-import os
 
 #######################################
 # DATA LOADING
@@ -18,27 +15,23 @@ import os
 
 st.set_page_config(layout='wide')
 
-# Determine the base path
-base_path = os.path.dirname(__file__)
-
-# Loading data files
-df = pd.read_csv(os.path.join(base_path, 'df2020.csv'))
-df2018 = pd.read_csv(os.path.join(base_path, 'df2018.csv'))
-full_data2018 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2018.csv'))
-full_data2019 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2019.csv'))
-full_df2020 = pd.read_csv(os.path.join(base_path, 'survey_results_sample_2020.csv'))
-df2019 = pd.read_csv(os.path.join(base_path, 'df2019.csv'))
+# Loading data files from the 'streamlit' directory
+df = pd.read_csv('streamlit/df2020.csv')
+df2018 = pd.read_csv('streamlit/df2018.csv')
+full_data2018 = pd.read_csv('streamlit/survey_results_sample_2018.csv')
+full_data2019 = pd.read_csv('streamlit/survey_results_sample_2019.csv')
+full_df2020 = pd.read_csv('streamlit/survey_results_sample_2020.csv')
+df2019 = pd.read_csv('streamlit/df2019.csv')
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
 
 # Load CSS file
 def local_css(file_name):
-    css_path = os.path.join(base_path, file_name)
-    with open(css_path) as f:
+    with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("style.css")
+local_css("streamlit/style.css")
 
 #######################################
 # DATA PREPARATION FOR VISUALISATION
