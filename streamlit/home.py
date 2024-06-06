@@ -8,6 +8,9 @@ import numpy as np
 from scipy.stats import norm
 from scipy import stats
 import random
+import functions as ff
+import main_analysis as main
+
 
 #######################################
 # DATA LOADING
@@ -196,3 +199,4 @@ else:
         </div>
         """
         st.markdown(highest_paying_ds_text, unsafe_allow_html=True)
+ 
