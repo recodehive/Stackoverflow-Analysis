@@ -19,12 +19,12 @@ import main_analysis as main
 st.set_page_config(layout='wide')
 
 # Loading data files from the 'streamlit' directory
-df = pd.read_csv('streamlit/df2020.csv')
-df2018 = pd.read_csv('streamlit/df2018.csv')
-full_data2018 = pd.read_csv('streamlit/survey_results_sample_2018.csv')
-full_data2019 = pd.read_csv('streamlit/survey_results_sample_2019.csv')
-full_df2020 = pd.read_csv('streamlit/survey_results_sample_2020.csv')
-df2019 = pd.read_csv('streamlit/df2019.csv')
+df = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/df2020.csv')
+df2018 = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/df2018.csv')
+full_data2018 = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/survey_results_sample_2018.csv')
+full_data2019 = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/survey_results_sample_2019.csv')
+full_df2020 = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/survey_results_sample_2020.csv')
+df2019 = pd.read_csv('https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/df2019.csv')
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
@@ -34,7 +34,7 @@ def local_css(file_name):
     with open(file_name) as f:
         st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
 
-local_css("streamlit/style.css")
+local_css("https://github.com/Recode-Hive/Stackoverflow-Analysis/blob/main/streamlit/style.css")
 
 #######################################
 # DATA PREPARATION FOR VISUALISATION
