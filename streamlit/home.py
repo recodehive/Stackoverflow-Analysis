@@ -28,12 +28,40 @@ df2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflo
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
 
-# Load CSS file
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+#######################################
+# CSS STYLING
+#######################################
 
-local_css("https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/style.css")
+css = """
+<style>
+.analysis-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-bottom: 110px;
+}
+
+.analysis-container-extra {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.analysis-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+</style>
+"""
+
+st.markdown(css, unsafe_allow_html=True)
 
 #######################################
 # DATA PREPARATION FOR VISUALISATION
