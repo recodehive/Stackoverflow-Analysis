@@ -8,7 +8,7 @@ import numpy as np
 from scipy.stats import norm
 from scipy import stats
 import random
-import functions as func  
+import functions as func
 import main_analysis as main
 
 #######################################
@@ -17,7 +17,7 @@ import main_analysis as main
 
 st.set_page_config(layout='wide')
 
-# Loading data files from the 'streamlit' directory using raw URLs
+# Loading data files from the 'streamlit' directory
 df = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2020.csv')
 df2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2018.csv')
 full_data2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2018.csv')
@@ -28,12 +28,40 @@ df2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflo
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
 
-# Load CSS file
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+#######################################
+# CSS STYLING
+#######################################
 
-local_css("https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/style.css")
+css = """
+<style>
+.analysis-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-bottom: 110px;
+}
+
+.analysis-container-extra {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.analysis-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+</style>
+"""
+
+st.markdown(css, unsafe_allow_html=True)
 
 #######################################
 # DATA PREPARATION FOR VISUALISATION
