@@ -8,9 +8,8 @@ import numpy as np
 from scipy.stats import norm
 from scipy import stats
 import random
-import functions as ff
+import functions as func
 import main_analysis as main
-
 
 #######################################
 # DATA LOADING
@@ -19,22 +18,50 @@ import main_analysis as main
 st.set_page_config(layout='wide')
 
 # Loading data files from the 'streamlit' directory
-df = pd.read_csv('streamlit/df2020.csv')
-df2018 = pd.read_csv('streamlit/df2018.csv')
-full_data2018 = pd.read_csv('streamlit/survey_results_sample_2018.csv')
-full_data2019 = pd.read_csv('streamlit/survey_results_sample_2019.csv')
-full_df2020 = pd.read_csv('streamlit/survey_results_sample_2020.csv')
-df2019 = pd.read_csv('streamlit/df2019.csv')
+df = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2020.csv')
+df2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2018.csv')
+full_data2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2018.csv')
+full_data2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2019.csv')
+full_df2020 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2020.csv')
+df2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2019.csv')
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
 
-# Load CSS file
-def local_css(file_name):
-    with open(file_name) as f:
-        st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html=True)
+#######################################
+# CSS STYLING
+#######################################
 
-local_css("streamlit/style.css")
+css = """
+<style>
+.analysis-container {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 150px;
+    margin-bottom: 110px;
+}
+
+.analysis-container-extra {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #D8DEDF;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.analysis-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+</style>
+"""
+
+st.markdown(css, unsafe_allow_html=True)
 
 #######################################
 # DATA PREPARATION FOR VISUALISATION
@@ -98,7 +125,7 @@ if year == '2018':
     visual, analysis = st.columns((3, 1))
     with visual:
         st.title("Highest Paying Countries for Data Scientists")
-        ff.heighest_paying(full_data2018)
+        func.heighest_paying(full_data2018)
     with analysis:
         highest_paying_ds_text = """
         <div class='analysis-container'>
@@ -112,7 +139,7 @@ if year == '2018':
 
     with visual:
         st.title("Operating System")
-        ff.plot_pie_plotly(full_data2018, 'OpSys')
+        func.plot_pie_plotly(full_data2018, 'OpSys')
     with analysis:
         operating_text = """
         <div class='analysis-container'>
@@ -126,8 +153,8 @@ if year == '2018':
 
     with visual:
         st.title("Top IDEs")
-        ff.plot_bar_plotly(full_data2018, "IDE", 10, 500, 800)
-        ff.plot_pie_plotly(full_data2018, "IDE", 10, 550, 600)
+        func.plot_bar_plotly(full_data2018, "IDE", 10, 500, 800)
+        func.plot_pie_plotly(full_data2018, "IDE", 10, 550, 600)
     with analysis:
         top_ide_text = """
         <div class='analysis-container'>
@@ -143,7 +170,7 @@ if year == '2018':
         """
         st.markdown(top_ide_text, unsafe_allow_html=True)
 
-    ff.ai_graphs()
+    func.ai_graphs()
 
     ai_text = """
     <div class='analysis-container-extra'>
@@ -170,7 +197,7 @@ elif year == '2019':
     visual, analysis = st.columns((3, 1))
     with visual:
         st.title("Highest Paying Countries for Data Scientists")
-        ff.heighest_paying_2019()
+        func.heighest_paying_2019()
     with analysis:
         highest_paying_ds_text = """
         <div class='analysis-container'>
@@ -188,7 +215,7 @@ else:
     visual, analysis = st.columns((3, 1))
     with visual:
         st.title("Highest Paying Countries for Data Scientists")
-        ff.heighest_paying(df2020)
+        func.heighest_paying(df2020)
     with analysis:
         highest_paying_ds_text = """
         <div class='analysis-container'>
@@ -199,4 +226,3 @@ else:
         </div>
         """
         st.markdown(highest_paying_ds_text, unsafe_allow_html=True)
- 
