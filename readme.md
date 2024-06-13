@@ -1,12 +1,6 @@
 # Stackoverflow Analysis Guidelines 
 
-<img src="https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png" align="left" height="100" width="450" >
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+![Stackoverflow Logo](https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png)
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
 <img src="https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis">
@@ -26,6 +20,8 @@
 11. [License](#%EF%B8%8F-license)
 12. [Thanks to all Contributors](#-thanks-to-all-contributors)
 13. [Support](#-support)
+
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) ![Last Commit](https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis) ![Code Size](https://img.shields.io/github/languages/code-size/Sanjayviswa/Stackoverflow-Analysis)
 
 
 ## 👨‍💻 Demo Video 
@@ -53,17 +49,17 @@ We welcome contributions from all levels of experience. If you think the communi
 
 ## Finding Insights from Stack Overflow Developer Survey
 
+### Objective:
+To perform Analysis on 3 years Stackoverflow dataset to gain insights.
 
-1. Objective: To perform Analysis on 3 years Stackoverflow dataset to gain insights.
-2. Goals:
-   + Analyze the impact of higher education on salary of the surveyed developers.
-   + Investigate the impact of education/experience/responsibilities on gender inequalities.
-   + Examine the impact on participation rates due to different ethnicities.
-   + Determine if there is a difference between men's and women's incomes.
-   + Analyze the increase in popularity of a language in the current year due to developer’s interest in the previous year.
+### Goals:
+- Analyze the impact of higher education on the salary of the surveyed developers.
+- Investigate the impact of education/experience/responsibilities on gender inequalities.
+- Examine the impact on participation rates due to different ethnicities.
+- Determine if there is a difference between men's and women's incomes.
+- Analyze the increase in popularity of a language in the current year due to developer’s interest in the previous year.
 
 Stack Overflow is a professional community for developers, conducting an annual survey. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
-
 
 ### Project Goals:
 
@@ -96,9 +92,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Thanks to all contributors for helping this project grow! 🍻
 
-<a href="https://github.com/sanjay-kv/Stackoverflow-Analysis/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=sanjay-kv/Stackoverflow-Analysis" />
-</a>
+[![Contributors](https://contrib.rocks/image?repo=sanjay-kv/Stackoverflow-Analysis)](https://github.com/sanjay-kv/Stackoverflow-Analysis/graphs/contributors)
 
 ## 🙏 Support
 
@@ -106,6 +100,10 @@ Don't forget to leave a star ⭐️ for this project!
 
 Crafted with ♥ by @sanjay-kv.
 
+
 Here's a link to the project wiki: https://github.com/tech-hardik/Stackoverflow-Analysis/wiki
 
 [Back to Top](#stackoverflow-analysis-guidelines)
+
+Here's a link to the project wiki: [Stackoverflow Analysis Wiki](https://github.com/tech-hardik/Stackoverflow-Analysis/wiki)
+
