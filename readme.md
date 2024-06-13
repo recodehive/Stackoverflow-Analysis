@@ -2,7 +2,27 @@
 
 ![Stackoverflow Logo](https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png)
 
+[![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
+<img src="https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis">
+<img src="https://img.shields.io/github/languages/code-size/Sanjayviswa/Stackoverflow-Analysis">
+
+## Table of Contents
+1. [Demo Video](#-demo-video)
+2. [Prerequisites](#-prerequisites)
+3. [Installation Steps](#%EF%B8%8F-installation-steps)
+4. [Development](#development)
+5. [Finding Insights from Stack Overflow Developer Survey](#finding-insights-from-stack-overflow-developer-survey)
+6. [Project Goals](#project-goals)
+7. [Data Source and Background](#data-source-and-background)
+8. [Data Format](#data-format)
+9. [Expected Work](#expected-work)
+10. [Contributing](#-contributing)
+11. [License](#%EF%B8%8F-license)
+12. [Thanks to all Contributors](#-thanks-to-all-contributors)
+13. [Support](#-support)
+
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs) ![Last Commit](https://img.shields.io/github/last-commit/Sanjayviswa/Stackoverflow-Analysis) ![Code Size](https://img.shields.io/github/languages/code-size/Sanjayviswa/Stackoverflow-Analysis)
+
 
 ## 👨‍💻 Demo Video 
 
@@ -80,4 +100,10 @@ Don't forget to leave a star ⭐️ for this project!
 
 Crafted with ♥ by @sanjay-kv.
 
+
+Here's a link to the project wiki: https://github.com/tech-hardik/Stackoverflow-Analysis/wiki
+
+[Back to Top](#stackoverflow-analysis-guidelines)
+
 Here's a link to the project wiki: [Stackoverflow Analysis Wiki](https://github.com/tech-hardik/Stackoverflow-Analysis/wiki)
+
