@@ -21,6 +21,16 @@ def main_analysis(df):
     st.title("StackOverflow Survey Analysis")
 
     with st.expander("Data Preview"):
+        st.markdown(
+            """
+            <div style='border-bottom: 4px solid lightblue;'>
+                <style>
+                .stTable { border-bottom:  4px solid lightblue; }
+                </style>
+            </div>
+            """,
+            unsafe_allow_html=True,
+        )
         st.dataframe(df)
 
     col_start1, col_start2, col_start3 = st.columns((1,1,1))
