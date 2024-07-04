@@ -6,8 +6,7 @@ import pycountry
 import numpy as np
 from scipy.stats import norm
 import random
-from scipy.stats import norm
-import re
+from scipy.stats import norm 
 
 data = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2020.csv')
 df2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2018.csv')
@@ -60,7 +59,7 @@ def plot_pie_plotly(df, column_name,top_n=10,  height=400, width=400 ):
 
     st.plotly_chart(fig_pie)    
 
-def plot_value_counts_plotly(df, column_name):
+def plot_valuecounts_plotly(df, column_name):
     colors = ['lightseagreen', 'lightgreen', 'lightyellow', 'lightcoral', 'lightsalmon', 'lavender']
 
     counts = df[column_name].value_counts()
@@ -87,7 +86,7 @@ def generate_normal_distribution_plots(df, column, top_n=10):
                       x1=temp_salaries.mean(), y1=norm.pdf(temp_salaries.mean(), temp_salaries.mean(), temp_salaries.std()),
                       line=dict(color="red", width=2, dash="dash"))
 
-        fig.update_layout(title='Normal Distribution of Annual Salaries in {}'.format(country),
+        fig.update_layout(title='Annual Salaries in {}'.format(country),
                           xaxis_title="Annual Salary in USD",
                           yaxis_title="Density")
         fig.update_layout(height=400, width=370)
@@ -124,7 +123,7 @@ def plot_age_distribution(df, column_name):
 
     st.plotly_chart(fig)
 
-def counts(df, column_name, year):
+def counts_function(df, column_name, year):
     language_counts = df[column_name].str.split(';', expand=True).stack().value_counts().to_frame(name=year)
     language_counts[column_name] = language_counts.index
     language_counts.reset_index(drop=True, inplace=True)
@@ -132,9 +131,9 @@ def counts(df, column_name, year):
     return language_counts
 
 def compare_column_and_plot(column):
-    languagedesire_2018 = counts(df2018, column, '2018')
-    languagedesire_2019 = counts(df2019, column, '2019')
-    languagedesire_2020 = counts(df2020, column, '2020')
+    languagedesire_2018 = counts_function(df2018, column, '2018')
+    languagedesire_2019 = counts_function(df2019, column, '2019')
+    languagedesire_2020 = counts_function(df2020, column, '2020')
 
     # Merge language counts for both years
     languagedesire_all = pd.merge(languagedesire_2018, languagedesire_2019, on=column, how='outer')
@@ -253,11 +252,12 @@ def heighest_paying(df):
     fig.update_layout(yaxis={'categoryorder':'total ascending'}, 
                       title={'x':0.5, 'xanchor': 'center', 'yanchor': 'top'})
     st.plotly_chart(fig)
-def plot_value_counts_plotly(column_name, df, column):
+    
+def plot_value_counts_plotly(column_name, df, position):
     values = df[column_name].value_counts()
     fig = go.Figure(data=[go.Bar(x=values.index, y=values.values, marker_color=random.choice(['lightseagreen', 'lightgreen', 'lightyellow', 'lightcoral', 'lightsalmon', 'lavender']))])
     fig.update_layout(title=f'Value Counts for {column_name}', xaxis_title='Response', yaxis_title='Count')
-    column.plotly_chart(fig)
+    position.plotly_chart(fig)
 
 def ai_graphs():
     st.title('AI Survey Responses')
@@ -314,3 +314,133 @@ def result_plot(data):
     )
 
     st.plotly_chart(fig, use_container_width=True)
+
+# Functions for df2021 and df2022
+
+def plot_comparison_plotly(df, column1_name, column2_name, top_n=10, height=450, width=700):
+    df_top = df[column1_name].value_counts().head(top_n).index.tolist()
+    
+    df_filtered = df[df[column1_name].isin(df_top)]
+    
+    df_grouped = df_filtered.groupby(column1_name)[column2_name].mean().reset_index()
+    
+    df_grouped = df_grouped.sort_values(by=column1_name)
+    
+    fig = px.bar(df_grouped, x=column1_name, y=column2_name,
+                 labels={column1_name: column1_name, column2_name: f'Average {column2_name}'},
+                 color_discrete_sequence=px.colors.qualitative.Pastel)
+    
+    fig.update_layout(xaxis_title=column1_name, yaxis_title=f'Average {column2_name}')
+    fig.update_layout(height=height, width=width)
+
+    return fig
+
+
+def counts(df, column_name):
+    language_counts = df[column_name].str.split(';', expand=True).stack().value_counts().to_frame(name='Count')
+    language_counts.reset_index(inplace=True)
+    language_counts.columns = ['Language', 'Count']
+    return language_counts
+
+def compare_language_columns_and_plot(df, column1, column2):
+    worked_with_counts = counts(df, column1)
+    want_to_work_with_counts = counts(df, column2)
+
+    all_languages = pd.merge(worked_with_counts, want_to_work_with_counts, on='Language', how='outer', suffixes=('_worked', '_want'))
+    all_languages.fillna(0, inplace=True)
+    all_languages['Count_worked'] = all_languages['Count_worked'].astype(int)
+    all_languages['Count_want'] = all_languages['Count_want'].astype(int)
+    all_languages.set_index('Language', inplace=True)
+
+    fig = go.Figure()
+
+    colors = ['#636EFA', '#EF553B']
+
+    for i, col in enumerate(all_languages.columns):
+        fig.add_trace(go.Bar(
+            x=all_languages.index,
+            y=all_languages[col],
+            name=col.split('_')[1],
+            marker=dict(color=colors[i % len(colors)])
+        ))
+
+    fig.update_layout(
+        xaxis_title='Languages/Web Stacks',
+        yaxis_title='Count',
+        font=dict(size=14),
+        barmode='stack',
+        height=600,
+        width=800
+    )
+
+    return fig
+
+def compare_columns_and_plot(df2021, df2022, column):
+    languagedesire_2021 = counts(df2021, column)
+    languagedesire_2022 = counts(df2022, column)
+
+    languagedesire_2021.rename(columns={'Count': '2021'}, inplace=True)
+    languagedesire_2022.rename(columns={'Count': '2022'}, inplace=True)
+
+    languagedesire_all = pd.merge(languagedesire_2021, languagedesire_2022, on='Language', how='outer')
+    languagedesire_all.fillna(0, inplace=True)
+    languagedesire_all['2021'] = languagedesire_all['2021'].astype(int)
+    languagedesire_all['2022'] = languagedesire_all['2022'].astype(int)
+    languagedesire_all.set_index('Language', inplace=True)
+
+    languagedesire19_20 = languagedesire_all.div(languagedesire_all.sum(axis=0), axis=1)
+
+    fig = go.Figure()
+
+    colors = ['#636EFA', '#EF553B']
+
+    for i, col in enumerate(languagedesire19_20.columns):
+        fig.add_trace(go.Bar(
+            x=languagedesire19_20.index,
+            y=languagedesire19_20[col],
+            name=col,
+            marker=dict(color=colors[i % len(colors)])
+        ))
+
+    fig.update_layout(
+        title='Comparison of Language Desires by Year',
+        xaxis_title=column,
+        yaxis_title='Percentages',
+        font=dict(size=14),
+        barmode='group',
+        height=600,
+        width=800
+    )
+
+    return fig
+
+def clustered_graph(df, col1, col2):
+    top_10_values = df[col2].value_counts().nlargest(10).index
+    filtered_df = df[df[col2].isin(top_10_values)]
+
+    fig = px.histogram(filtered_df, x=col2, color=col1, barmode='group',
+                       labels={col2: col2, 'count': 'Count'},
+                       title=f'Clustered Bar Chart of {col1} and {col2}')
+
+    fig.update_layout(xaxis={'categoryorder': 'total descending'})
+    fig.update_xaxes(tickangle=45)
+    
+    return fig
+
+def stacked_graph_for_correlation(df, col1, col2, height=600, width=800):
+    freq_table = df.groupby([col1, col2]).size().reset_index(name='counts')
+    
+    fig = px.bar(freq_table, x=col2, y='counts', color=col1, 
+                 title=f'Distribution of {col1} by {col2}',
+                 labels={col1: col1, col2: col2, 'counts': 'Counts'},
+                 height=height, width=width)
+    
+    fig.update_layout(
+        title={'text': f'{col1} Distribution by {col2}', 'x': 0.5},
+        xaxis_title=col2,
+        yaxis_title='Counts',
+        legend_title=col1,
+        legend=dict(x=1, y=1)
+    )
+    
+    return fig
