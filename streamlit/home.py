@@ -1,12 +1,6 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-import plotly.graph_objects as go
-import pycountry
-import plotly.figure_factory as ff
-import numpy as np
-from scipy.stats import norm
-from scipy import stats
 import random
 import functions as func
 import main_analysis as main
@@ -24,6 +18,8 @@ full_data2018 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stack
 full_data2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2019.csv')
 full_df2020 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2020.csv')
 df2019 = pd.read_csv('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2019.csv')
+df2021 = pd.read_csv('df2021.csv')
+df2022 = pd.read_csv('df2022.csv')
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
@@ -39,8 +35,8 @@ css = """
     background-color: #D8DEDF;
     padding: 15px;
     border-radius: 10px;
-    margin-top: 150px;
-    margin-bottom: 110px;
+    margin-top: 100px;
+    margin-bottom: 60px;
 }
 
 .analysis-container-extra {
@@ -57,6 +53,9 @@ css = """
     font-weight: bold;
     color: #333333;
     margin-bottom: 10px;
+
+.analysis-text {
+color: black;
 }
 </style>
 """
@@ -87,6 +86,9 @@ df_ai = full_data2018[['AIDangerous', 'AIInteresting', 'AIResponsible', 'AIFutur
 df2018['Gender'] = df2018['Gender'].replace({"Male": "Man", "Female": "Woman"})
 
 full_data2018.rename(columns={'ConvertedSalary': 'SalaryUSD'}, inplace=True)
+df2021['Employment'] = df2021['Employment'].replace('Independent contractor, freelancer, or self-employed', 'Self-Employed')
+df2022['Employment'] = df2022['Employment'].replace('Independent contractor, freelancer, or self-employed', 'Self-Employed')
+
 
 # Strip leading and trailing whitespace from all columns in df_ai
 df_ai = df_ai.apply(lambda x: x.str.strip() if x.dtype == "object" else x)
@@ -107,6 +109,11 @@ short_mapping = {
 }
 df_ai.replace(short_mapping, inplace=True)
 
+def mean_salary(df):
+    mean_salary = df[df['SalaryUSD'] <= 1000000]['SalaryUSD'].mean()
+    df.loc[df['SalaryUSD'] > 1000000, 'SalaryUSD'] = mean_salary
+    return df
+
 # Function to create value count plots for each column
 def plot_value_counts(column_name):
     colors = ['skyblue', 'yellow']
@@ -114,13 +121,16 @@ def plot_value_counts(column_name):
     fig.update_layout(title=f'Value Counts for {column_name}', xaxis_title='Response', yaxis_title='Count')
     st.plotly_chart(fig)
 
+df2021 = mean_salary(df2021)
+df2022 = mean_salary(df2022)
 #########################################################################
 
 # Sidebar for year selection
-year = st.sidebar.selectbox('Select Year', ['2018', '2019', '2020'])
+year = st.sidebar.selectbox('Select Year', ['2018', '2019', '2020', '2021', '2022'])
 
 if year == '2018':
     main.main_analysis(df2018)
+    main.main_analysis_2(df2018)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -193,6 +203,7 @@ if year == '2018':
 
 elif year == '2019':
     main.main_analysis(df2019)
+    main.main_analysis_2(df2019)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -209,8 +220,9 @@ elif year == '2019':
         """
         st.markdown(highest_paying_ds_text, unsafe_allow_html=True)
 
-else:
+elif year == '2020':
     main.main_analysis(df2020)
+    main.main_analysis_2(df2020)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -226,3 +238,45 @@ else:
         </div>
         """
         st.markdown(highest_paying_ds_text, unsafe_allow_html=True)
+
+elif year == '2021':
+    main.main_analysis(df2021)
+    main.common_analysis_2021_2022(df2021)
+    visual, analysis = st.columns((3, 1))
+    with visual:
+        fig = func.plot_valuecounts_plotly(df2021,'NEWStuck')
+        st.plotly_chart(fig)
+    
+    with analysis:
+        newstuck_text = """
+        <div class='analysis-container'>
+            <div class='analysis-title'>Analysis: NewsStuck Analysis</div>
+            <div class='analysis-text' style="color: red; font-weight: bold;">
+                We're all stuck while coding, sometime or other. StackOverflow asked its users what resource they use to get help while they feel stuck. 
+                Most of the people replied in quite a wordy way, we tried to implement simple NLP techniques to dissect the top answers.
+                Most answers seem to align with the 'internet help' view. Where they seek help from Google, StackOverflow Websites. Others rely on their colleagues and friends to  help them over.
+        </div>
+    """
+        st.markdown(newstuck_text, unsafe_allow_html=True)
+
+    with visual:
+        func.plot_pie_plotly(df2021, 'OpSys',top_n=10,  height=500, width=650)
+
+    with analysis:
+        opsys_text = """
+        <div class='analysis-container'>
+            <div class='analysis-title'>Analysis: Operating System</div>
+            <div class='analysis-text' style="color: red; font-weight: bold;">
+                Windows has been the dominated Operating System for most of the people around the world. With Linux and iOS having same proportion of userbase. 
+        </div>
+    """
+        st.markdown(opsys_text, unsafe_allow_html=True)
+
+    
+else:
+    main.main_analysis(df2022)
+    main.common_analysis_2021_2022(df2022)
+
+    fig = func.compare_language_columns_and_plot(df2022, 'OpSysPersonal use', 'OpSysProfessional use')
+
+    st.plotly_chart(fig)
