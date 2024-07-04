@@ -5,7 +5,7 @@
 * Curated dataset: Provided by StackOverflow Analysis
 
 
-#### Main Interface Look 
+#### Main Interface Look  
 ![](Visualizations/main-interface.png?raw=true)
 
 ##Note##
