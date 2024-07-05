@@ -100,9 +100,6 @@ Don't forget to leave a star ⭐️ for this project!
 
 Crafted with ♥ by @sanjay-kv.
 
-
-Here's a link to the project wiki: https://github.com/tech-hardik/Stackoverflow-Analysis/wiki
-
 [Back to Top](#stackoverflow-analysis-guidelines)
 
 Here's a link to the project wiki: [Stackoverflow Analysis Wiki](https://github.com/tech-hardik/Stackoverflow-Analysis/wiki)
