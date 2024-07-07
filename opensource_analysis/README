@@ -1,0 +1,20 @@
+# Stackoverflow Analysis Project
+
+## Setup Instructions
+
+1. **Download and Extract the Project Folder**
+   - Download the project folder and extract it to a desired location on your computer.
+
+2. **Navigate to the Project Directory**
+   ```bash
+   cd /path/to/extracted/project/folder/opensource_analysis
+
+
+## Install the Dependencies
+pip install -r requirements.txt
+
+## Run the Streamlit App 
+streamlit run app.py
+
+## Access the App
+Open the URL http://localhost:8501 in your web browser to access the Streamlit app
