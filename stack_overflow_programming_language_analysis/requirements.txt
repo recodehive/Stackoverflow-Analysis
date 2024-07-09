@@ -1,0 +1,10 @@
+pandas
+numpy
+scikit-learn
+seaborn
+plotly
+matplotlib
+streamlit
+networkx
+statsmodels
+
