@@ -1,6 +1,9 @@
 import streamlit as st
 import joblib
 import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+from sklearn.metrics import accuracy_score, confusion_matrix, classification_report, roc_curve, auc
 
 # Load the model
 model = joblib.load('model.pkl')
@@ -59,3 +62,47 @@ if submit_button:
 
     # Display the prediction
     st.write(f'Predicted Job Satisfaction: {prediction[0]}')
+
+    # Evaluate the model on test data (assuming y_test and y_pred are available)
+    # This part would typically be done during model development, not in the prediction app
+    # However, for demonstration purposes, we can create some dummy data
+    y_test = [1, 0, 1, 1, 0]  # Example true labels
+    y_pred = model.predict(input_df)  # Example predicted labels
+
+    # Print accuracy
+    accuracy = accuracy_score(y_test, y_pred)
+    st.write(f'Accuracy: {accuracy:.2f}')
+
+    # Print classification report
+    report = classification_report(y_test, y_pred, output_dict=True)
+    st.write('Classification Report:')
+    st.write(report)
+
+    # Convert classification report to a DataFrame for better readability
+    report_df = pd.DataFrame(report).transpose()
+    st.write(report_df)
+
+    # Plot confusion matrix
+    cm = confusion_matrix(y_test, y_pred)
+    plt.figure(figsize=(10, 6))
+    sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', cbar=False)
+    plt.title('Confusion Matrix')
+    plt.xlabel('Predicted')
+    plt.ylabel('Actual')
+    st.pyplot(plt)
+
+    # If the model is a binary classifier, plot the ROC curve
+    if len(set(y_test)) == 2:
+        fpr, tpr, _ = roc_curve(y_test, y_pred)
+        roc_auc = auc(fpr, tpr)
+        
+        plt.figure(figsize=(10, 6))
+        plt.plot(fpr, tpr, color='darkorange', lw=2, label=f'ROC curve (area = {roc_auc:.2f})')
+        plt.plot([0, 1], [0, 1], color='navy', lw=2, linestyle='--')
+        plt.xlim([0.0, 1.0])
+        plt.ylim([0.0, 1.05])
+        plt.xlabel('False Positive Rate')
+        plt.ylabel('True Positive Rate')
+        plt.title('Receiver Operating Characteristic (ROC) Curve')
+        plt.legend(loc='lower right')
+        st.pyplot(plt)
