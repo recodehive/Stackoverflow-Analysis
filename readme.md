@@ -1,4 +1,4 @@
-# Stackoverflow Analysis Guidelines 
+# Stackoverflow Analysis Guidelines .
 
 ![Stackoverflow Logo](https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png)
 
