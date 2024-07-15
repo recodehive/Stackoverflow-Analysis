@@ -57,7 +57,7 @@ To perform Analysis on 3 years Stackoverflow dataset to gain insights.
 - Investigate the impact of education/experience/responsibilities on gender inequalities.
 - Examine the impact on participation rates due to different ethnicities.
 - Determine if there is a difference between men's and women's incomes.
-- Analyze the increase in popularity of a language in the current year due to developer’s interest in the previous year.
+- Analyze the increase in popularity of a language in the current year due to the developer’s interest in the previous year.
 
 Stack Overflow is a professional community for developers, conducting an annual survey. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
 
