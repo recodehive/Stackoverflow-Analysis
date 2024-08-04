@@ -17,21 +17,6 @@
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 This is the all in one place for documentation help regarding the postman challenge.
 </div>
-## Table of Contents
-1. [Demo Video](#-demo-video)
-2. [Prerequisites](#-prerequisites)
-3. [Installation Steps](#%EF%B8%8F-installation-steps)
-4. [Development](#development)
-5. [Finding Insights from Stack Overflow Developer Survey](#finding-insights-from-stack-overflow-developer-survey)
-6. [Project Goals](#project-goals)
-7. [Data Source and Background](#data-source-and-background)
-8. [Data Format](#data-format)
-9. [Expected Work](#expected-work)
-10. [Contributing](#-contributing)
-11. [License](#%EF%B8%8F-license)
-12. [Thanks to all Contributors](#-thanks-to-all-contributors)
-13. [Support](#-support)
-
 
 ## 👨‍💻 Demo Video 
 
