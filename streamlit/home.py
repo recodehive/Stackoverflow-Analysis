@@ -16,14 +16,24 @@ def load_data(url):
     return pd.read_csv(url)
 
 # Loading data files from the 'streamlit' directory
-df = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2020.csv')
-df2018 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2018.csv')
-full_data2018 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2018.csv')
-full_data2019 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2019.csv')
-full_df2020 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2020.csv')
-df2019 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2019.csv')
-df2021 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2021.csv')
-df2022 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2022.csv')
+# df = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2020.csv')
+# df2018 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2018.csv')
+# full_data2018 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2018.csv')
+# full_data2019 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2019.csv')
+# full_df2020 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/survey_results_sample_2020.csv')
+# df2019 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2019.csv')
+# df2021 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2021.csv')
+# df2022 = load_data('https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/df2022.csv')
+
+df = load_data('df2020.csv')
+df2018 = load_data('df2018.csv')
+full_data2018 = load_data('survey_results_sample_2018.csv')
+full_data2019 = load_data('survey_results_sample_2019.csv')
+full_df2020 = load_data('survey_results_sample_2020.csv')
+df2019 = load_data('df2019.csv')
+df2021 = load_data('df2021.csv')
+df2022 = load_data('df2022.csv')
+
 
 # Filter the 2020 dataframe
 df2020 = df[df['SalaryUSD'] < 200000]
@@ -136,7 +146,7 @@ year = st.sidebar.selectbox('Select Year', ['2018', '2019', '2020', '2021', '202
 
 if year == '2018':
     main.main_analysis(df2018)
-    main.main_analysis_2(df2018)
+    main.main_analysis_2(df2018, year)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -209,7 +219,7 @@ if year == '2018':
 
 elif year == '2019':
     main.main_analysis(df2019)
-    main.main_analysis_2(df2019)
+    main.main_analysis_2(df2019, year)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -228,7 +238,7 @@ elif year == '2019':
 
 elif year == '2020':
     main.main_analysis(df2020)
-    main.main_analysis_2(df2020)
+    main.main_analysis_2(df2020, year)
 
     visual, analysis = st.columns((3, 1))
     with visual:
@@ -247,7 +257,7 @@ elif year == '2020':
 
 elif year == '2021':
     main.main_analysis(df2021)
-    main.common_analysis_2021_2022(df2021)
+    main.common_analysis_2021_2022(df2021, year)
     visual, analysis = st.columns((3, 1))
     with visual:
         fig = func.plot_valuecounts_plotly(df2021,'NEWStuck')
@@ -281,7 +291,7 @@ elif year == '2021':
     
 else:
     main.main_analysis(df2022)
-    main.common_analysis_2021_2022(df2022)
+    main.common_analysis_2021_2022(df2022, year)
 
     fig = func.compare_language_columns_and_plot(df2022, 'OpSysPersonal use', 'OpSysProfessional use')
 
