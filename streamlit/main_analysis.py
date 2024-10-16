@@ -103,7 +103,7 @@ def main_analysis(df):
 
     with visual:
         st.title("Ethnicity VS Participation")
-        ff.plot_bar_plotly(df, 'Ethnicity')
+        ff.plot_bar_plotly(df, 'Ethnicity', key='ethnicity_plot')
 
     with analysis:
         Ethnicity_text = """
@@ -176,7 +176,7 @@ def main_analysis(df):
     if ds is not None: 
         with visual:
             st.title("Country Wise Data Scientists Participation")
-            ff.plot_bar_plotly(ds, "Country")
+            ff.plot_bar_plotly(ds, "Country", key='country_plot')
 
         with analysis:     
             data_scientist_participation_text = """
@@ -196,7 +196,7 @@ def main_analysis(df):
 ##### To Speed Up the Web Page, Main Analysis is divided into 2 ######
 
 
-def main_analysis_2(df):
+def main_analysis_2(df, year):
     visual2, analysis2 = st.columns((3,1))
 
     if df is df2019:
@@ -262,7 +262,8 @@ def main_analysis_2(df):
     if ds is not None: 
         with visual2:
             st.title("Country Wise Data Scientists Participation")
-            ff.plot_bar_plotly(ds, "Country")
+            # Use the year parameter instead of year_variable
+            ff.plot_bar_plotly(ds, "Country", key=f'country_plot_{year}')
 
         with analysis2:     
             data_scientist_participation_text = """
@@ -368,7 +369,7 @@ def common_analysis_2021_2022(df):
         st.markdown(employment_text, unsafe_allow_html=True)
 
     with visual3:
-        ff.plot_bar_plotly(df, 'DevType', top_n=10, height=500, width=1000)
+        ff.plot_bar_plotly(df, 'DevType', top_n=10, height=500, width=1000, key=f'devtype_plot_{year_variable}')
 
     with analysis3:
         devtype_text = """
@@ -429,4 +430,3 @@ def common_analysis_2021_2022(df):
         </div>
     """
         st.markdown(webframe_text, unsafe_allow_html=True)
-

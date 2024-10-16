@@ -1,2 +1,4 @@
 catboost_info/
+venv/
+.venv/
 streamlit\__pycache__

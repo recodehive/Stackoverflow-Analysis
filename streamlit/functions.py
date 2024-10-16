@@ -20,6 +20,21 @@ df2020 = data[(data['SalaryUSD'] < 200000)]
 results = pd.read_csv("https://raw.githubusercontent.com/Recode-Hive/Stackoverflow-Analysis/main/streamlit/results.csv")
 
 
+# Load the data from local CSV files
+# data = pd.read_csv('df2020.csv')
+# df2018 = pd.read_csv('df2018.csv')
+# full_data2018 = pd.read_csv('survey_results_sample_2018.csv')
+# full_data2019 = pd.read_csv('survey_results_sample_2019.csv')
+# full_df2020 = pd.read_csv('survey_results_sample_2020.csv')
+# df2019 = pd.read_csv('df2019.csv')
+
+# # Filter the 2020 data
+# df2020 = data[(data['SalaryUSD'] < 200000)]
+
+# # Load results for job satisfaction from the local file
+# results = pd.read_csv("results.csv")
+
+
 #######################################
 # VISUALISATION STARTS
 #######################################
@@ -35,7 +50,7 @@ def plot_boxplot(data, x, y, title):
 
 #########################################################################    
 
-def plot_bar_plotly(df, column_name, top_n=10, height=450, width=700):
+def plot_bar_plotly(df, column_name, top_n=10, height=450, width=700, key=None):
     df_counts = df[column_name].value_counts().head(top_n).reset_index()
     df_counts.columns = [column_name, 'Count']
     
@@ -46,7 +61,7 @@ def plot_bar_plotly(df, column_name, top_n=10, height=450, width=700):
     fig.update_layout(xaxis_title=column_name, yaxis_title='Number of Developers')
     fig.update_layout(height=height, width=width)
 
-    return st.plotly_chart(fig)
+    return st.plotly_chart(fig, key=key)
 
 
 def plot_pie_plotly(df, column_name,top_n=10,  height=400, width=400 ):
