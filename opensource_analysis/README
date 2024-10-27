@@ -18,3 +18,82 @@ streamlit run app.py
 
 ## Access the App
 Open the URL http://localhost:8501 in your web browser to access the Streamlit app
+
+
+# Survey Data EDA and Machine Learning App
+
+This repository contains an application built using **Streamlit** to explore and analyze survey data from developers. The app performs **Exploratory Data Analysis (EDA)** and includes visualizations of key data features. Additionally, it can be extended to support **machine learning** tasks like prediction.
+
+## Table of Contents
+- [Overview](#overview)
+- [Installation](#installation)
+- [Dataset](#dataset)
+- [Features](#features)
+  - [1. Data Loading](#1-data-loading)
+  - [2. Basic Information](#2-basic-information)
+  - [3. Categorical Value Counts](#3-categorical-value-counts)
+  - [4. Visualizations](#4-visualizations)
+  - [5. Correlation Heatmap](#5-correlation-heatmap)
+  - [6. Cumulative Distribution](#6-cumulative-distribution)
+- [Usage](#usage)
+- [Future Improvements](#future-improvements)
+- [License](#license)
+
+## Overview
+This project provides an **interactive web-based application** that allows users to explore a dataset of developer survey results. The app is built using **Streamlit** and includes several exploratory data analysis features, such as visualizing distributions of different variables (e.g., salary, job satisfaction, age). It also displays the relationship between various factors, such as job satisfaction and company size, and can be extended to machine learning tasks.
+
+## Dataset
+The dataset used in this project is a sample from the **2018 Developer Survey Results**. It contains various columns such as:
+- `Country`: Respondent's country.
+- `Employment`: Employment status of the respondent.
+- `ConvertedSalary`: Salary converted into USD.
+- `DevType`: Developer types (e.g., web developer, data scientist).
+- `LanguageWorkedWith`: Programming languages the respondent has worked with.
+- `CompanySize`: Size of the company the respondent works for.
+- `JobSatisfaction`: Job satisfaction rating on a scale.
+- `CareerSatisfaction`: Career satisfaction rating.
+
+## Features
+
+### 1. Data Loading
+The application loads the dataset (CSV file) and fills in missing values where necessary. If the file is not found, an error message will be displayed on the app.
+
+### 2. Basic Information
+Displays essential information about the dataset, including:
+- General structure of the data (`df.info()`).
+- Descriptive statistics (`df.describe()`).
+
+### 3. Categorical Value Counts
+For the categorical columns (`Country`, `Employment`, `DevType`, `LanguageWorkedWith`), the app shows the distribution of values using value counts and percentages.
+
+### 4. Visualizations
+The app provides the following visualizations to explore the data:
+- **Salary Distribution**: A histogram with kernel density estimation (KDE) to visualize salary distribution.
+- **Job Satisfaction Analysis**: Bar charts for `JobSatisfaction` and `CareerSatisfaction`.
+- **Programming Languages**: The top 10 most-used programming languages among respondents.
+- **Job Satisfaction by Company Size**: A box plot showing the relationship between company size and job satisfaction.
+- **Age Distribution**: A histogram with KDE to show the age distribution of respondents.
+- **Country Distribution**: A line plot showing the top 10 countries by the number of respondents.
+- **Employment Status**: A pie chart showing the employment status distribution.
+- **Database Usage**: A bar chart of the top 10 databases used by respondents.
+- **Job Satisfaction by Gender**: A bar chart comparing job satisfaction across genders.
+
+### 5. Correlation Heatmap
+Displays a heatmap showing the correlation between numerical variables in the dataset.
+
+### 6. Cumulative Distribution
+Provides an **Empirical Cumulative Distribution Function (ECDF)** plot for the first numerical column in the dataset.
+
+## Usage
+After launching the app:
+1. The app loads the dataset and displays key information and visualizations on the home page.
+2. Navigate through the sections to explore different parts of the dataset interactively.
+3. The app is designed to be modular, allowing for future extensions, such as adding machine learning models for prediction tasks.
+
+## Future Improvements
+- Implement a **machine learning model** to predict job satisfaction or salary based on features like `Country`, `Employment`, `DevType`, etc.
+- Enhance the **EDA** with more detailed visualizations and insights.
+- Allow users to **upload their own dataset** for customized analysis.
+
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

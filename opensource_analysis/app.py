@@ -64,8 +64,8 @@ else:
 
         # Evaluate the model
         y_pred = model.predict(X_test)
-        classification_rep = classification_report(y_test, y_pred)
-        roc_auc = roc_auc_score(y_test, model.predict_proba(X_test)[:, 1])
+        classification_rep = classification_report(y_test, y_pred, zero_division=1)
+        roc_auc = roc_auc_score(pd.get_dummies(y_test).values[:, 1], model.predict_proba(X_test)[:, 1])
 
         # Get feature importance
         importances = model.named_steps['classifier'].feature_importances_
@@ -94,7 +94,7 @@ else:
 
         # Plot ROC Curve
         st.header('ROC Curve')
-        y_test_binary = y_test.map({'No': 0, 'Yes': 1})
+        y_test_binary = pd.get_dummies(y_test).values[:, 1]  # Convert to binary
         fpr, tpr, _ = roc_curve(y_test_binary, model.predict_proba(X_test)[:, 1])
         roc_auc = auc(fpr, tpr)
         fig, ax = plt.subplots()
@@ -150,6 +150,114 @@ else:
                 st.write(f'Prediction Probability: {prediction_prob[0]:.2f}')
             except Exception as e:
                 st.error(f"An error occurred during prediction: {e}")
+
+        # ================== EDA Enhancements ==================
+        st.header('Enhanced Exploratory Data Analysis (EDA)')
+
+        # Load full dataset for EDA
+        eda_data = pd.read_csv(file_path)
+
+        # Salary Analysis
+        st.subheader('Salary Distribution')
+        eda_data['ConvertedSalary'] = pd.to_numeric(eda_data['ConvertedSalary'], errors='coerce')
+        fig, ax = plt.subplots()
+        sns.histplot(eda_data['ConvertedSalary'].dropna(), kde=True, ax=ax)
+        ax.set_title('Distribution of Salaries')
+        ax.set_xlabel('Salary (USD)')
+        st.pyplot(fig)
+
+        # Job Satisfaction Analysis
+        satisfaction_cols = ['JobSatisfaction', 'CareerSatisfaction']
+        for col in satisfaction_cols:
+            st.subheader(f'Distribution of {col}')
+            fig, ax = plt.subplots()
+            eda_data[col].value_counts().plot(kind='bar', ax=ax)
+            ax.set_title(f'Distribution of {col}')
+            ax.set_xlabel('Satisfaction Level')
+            ax.set_ylabel('Count')
+            st.pyplot(fig)
+
+        # Programming Languages Analysis
+        st.subheader('Top 10 Programming Languages')
+        languages = eda_data['LanguageWorkedWith'].str.split(';', expand=True).stack()
+        fig, ax = plt.subplots()
+        languages.value_counts().head(10).plot(kind='bar', ax=ax)
+        ax.set_title('Top 10 Programming Languages')
+        ax.set_xlabel('Language')
+        ax.set_ylabel('Count')
+        st.pyplot(fig)
+
+        # Job Satisfaction by Company Size
+        st.subheader('Job Satisfaction by Company Size')
+        fig, ax = plt.subplots()
+        sns.boxplot(x='CompanySize', y='JobSatisfaction', data=eda_data, ax=ax)
+        ax.set_title('Job Satisfaction by Company Size')
+        ax.set_xlabel('Company Size')
+        ax.set_ylabel('Job Satisfaction')
+        st.pyplot(fig)
+
+        # Age Distribution
+        st.subheader('Age Distribution of Respondents')
+        fig, ax = plt.subplots()
+        sns.histplot(eda_data['Age'], kde=True, ax=ax)
+        ax.set_title('Age Distribution of Respondents')
+        ax.set_xlabel('Age')
+        st.pyplot(fig)
+
+        # Top 10 Countries of Respondents
+        st.subheader('Top 10 Countries of Respondents')
+        country_counts = eda_data['Country'].value_counts().head(10)
+        fig, ax = plt.subplots()
+        ax.plot(country_counts.index, country_counts.values, marker='o')
+        ax.set_title('Top 10 Countries of Respondents')
+        ax.set_xlabel('Country')
+        ax.set_ylabel('Number of Respondents')
+        st.pyplot(fig)
+
+        # Employment Status Distribution
+        st.header("Employment Status Distribution")
+        employment_counts = eda_data['Employment'].value_counts()
+        fig, ax = plt.subplots()
+        ax.pie(employment_counts.values, labels=employment_counts.index, autopct='%1.1f%%')
+        ax.set_title('Employment Status Distribution')
+        ax.axis('equal')
+        st.pyplot(fig)
+
+        # Databases Used
+        st.header("Top 10 Databases Used")
+        databases = eda_data['DatabaseWorkedWith'].str.split(';', expand=True).stack()
+        db_counts = databases.value_counts().head(10)
+        fig, ax = plt.subplots()
+        db_counts.plot(kind='barh', ax=ax)
+        ax.set_xlabel('Number of Users')
+        ax.set_ylabel('Database')
+        st.pyplot(fig)
+
+        # Job Satisfaction by Gender
+        st.header("Job Satisfaction by Gender")
+        job_sat_gender = pd.crosstab(eda_data['JobSatisfaction'], eda_data['Gender'])
+        fig, ax = plt.subplots()
+        job_sat_gender.plot(kind='bar', ax=ax)
+        ax.set_title('Job Satisfaction by Gender')
+        ax.set_xlabel('Job Satisfaction Level')
+        st.pyplot(fig)
+
+        # Correlation Heatmap
+        st.header("Correlation Heatmap of Numeric Variables")
+        numeric_columns = eda_data.select_dtypes(include=['int64', 'float64']).columns
+        fig, ax = plt.subplots()
+        sns.heatmap(eda_data[numeric_columns].corr(), annot=True, cmap='coolwarm', ax=ax)
+        ax.set_title('Correlation Heatmap of Numeric Variables')
+        st.pyplot(fig)
+
+        # Cumulative Distribution
+        st.header(f"Cumulative Distribution of {numeric_columns[0]}")
+        fig, ax = plt.subplots()
+        sns.ecdfplot(data=eda_data, x=numeric_columns[0], ax=ax)
+        ax.set_title(f'Cumulative Distribution of {numeric_columns[0]}')
+        ax.set_xlabel(numeric_columns[0])
+        ax.set_ylabel('Cumulative Proportion')
+        st.pyplot(fig)
 
     except Exception as e:
         st.error(f"An error occurred while loading data: {e}")
