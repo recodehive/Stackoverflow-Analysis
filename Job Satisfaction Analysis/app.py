@@ -80,7 +80,22 @@ if submit_button:
     input_df = input_df[features]
 
     # Make prediction
-    prediction = model.predict(input_df)
+    prediction_numeric = model.predict(input_df)[0]
 
     # Display the prediction
-    st.write(f'Predicted Job Satisfaction: {prediction[0]}')
+    satisfaction_categories = [
+    'Extremely dissatisfied', 
+    'Moderately dissatisfied', 
+    'Slightly dissatisfied', 
+    'Neither satisfied nor dissatisfied', 
+    'Slightly satisfied', 
+    'Moderately satisfied', 
+    'Extremely satisfied'
+]
+
+    # Map numeric prediction to category label
+    prediction_label = satisfaction_categories[int(prediction_numeric)]
+
+    # Display the prediction in categorical form
+    st.write(f'Predicted Job Satisfaction: {prediction_label}')
+
