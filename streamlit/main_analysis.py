@@ -322,7 +322,7 @@ def main_analysis_2(df, year):
 """     
         st.markdown(feature_jobsatis_text, unsafe_allow_html=True)
 
-def common_analysis_2021_2022(df):
+def common_analysis_2021_2022(df, year_variable):
     visual3, analysis3 = st.columns((3,1))
 
     with visual3:
