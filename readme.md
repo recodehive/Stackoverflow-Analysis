@@ -1,4 +1,4 @@
-<h1 align="center"> Stackoverflow Analysis Guidelines </h1>
+# Stackoverflow Analysis Guidelines
 
 ![Stackoverflow Logo](https://stackoverflow.design/assets/img/logos/so/logo-stackoverflow.png)
 
@@ -15,12 +15,9 @@
 <a href="https://github.com/recodehive/Stackoverflow-Analysis/graphs/contributors"><img alt="GitHub contributors" src="https://img.shields.io/github/contributors/recodehive/Stackoverflow-Analysis?color=2b9348"></a>
 <a href="https://github.com/recodehive/Stackoverflow-Analysis/blob/master/LICENSE"><img src="https://img.shields.io/github/license/recodehive/Stackoverflow-Analysis?color=2b9348" alt="License Badge"/></a>
 
-
-
-
 [![](https://visitcount.itsvg.in/api?id=gssoc-postman&label=Profile%20Views&color=0&icon=5&pretty=true)](https://visitcount.itsvg.in)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-This is the all in one place for documentation help regarding the postman challenge.
+This is the all-in-one place for documentation help regarding the Postman challenge.
 </div>
 
 ## 👨‍💻 Demo Video 
@@ -49,39 +46,28 @@ We welcome contributions from all levels of experience. If you think the communi
 ## Finding Insights from Stack Overflow Developer Survey
 
 ### Objective:
-To perform Analysis on 3 years Stackoverflow dataset to gain insights.
+To perform analysis on the last 3 years of Stack Overflow data to gain insights into developer trends and behaviors.
 
 ### Goals:
-- Analyze the impact of higher education on the salary of the surveyed developers.
-- Investigate the impact of education/experience/responsibilities on gender inequalities.
-- Examine the impact on participation rates due to different ethnicities.
-- Determine if there is a difference between men's and women's incomes.
-- Analyze the increase in popularity of a language in the current year due to the developer’s interest in the previous year.
+- Analyze the impact of higher education, experience, and responsibilities on salary and gender inequalities.
+- Investigate participation rates based on ethnicity and differences in income between men and women.
+- Explore the popularity of programming languages and predict their growth based on survey responses.
+- Examine the impact of education, experience, and responsibilities on gender inequalities.
+- Analyze the increase in popularity of a language in the current year due to developer interest in the previous year.
 
-Stack Overflow is a professional community for developers, conducting an annual survey. Analyzing the dataset professionally using modern tools can enable us to answer real-world questions effectively. The dataset covers 275 questions in total.
+### Data Source and Background:
+The dataset comes from the annual Stack Overflow developer survey, covering responses from developers in 180 countries. The data is available in CSV format, ranging from 40 to 150 MB, with responses from 1.5 Lakh survey participants.
 
-### Project Goals:
-
-1. Perform Analysis on the last 3 years Stack Overflow dataset to extract insights.
-2. Analyze the impact of higher education, experience, and responsibilities on salary and gender inequalities.
-3. Investigate participation rates based on ethnicity and differences in income between men and women.
-4. Explore the popularity of programming languages and predict their growth based on survey responses.
-
-### Data Source and Background
-
-The dataset comes from the annual Stack Overflow developer survey, covering responses from developers in 180 countries. The data are available in CSV format, ranging from 40 to 150 MB, with responses from 1.5 Lakh survey participants.
-
-### Data Format
-
+### Data Format:
 The data is in a CSV file format with 252,199 observations and 62 variables.
 
-### Expected Work
-
-Data wrangling tasks include handling null values and converting data for analysis. Techniques such as ML algorithms and data visualization will be employed.
+### Expected Work:
+- Perform data wrangling tasks, including handling null values and converting data for analysis.
+- Use techniques such as machine learning algorithms and data visualization to extract insights.
 
 ## 👨‍💻 Contributing
 
-- Contributions are greatly appreciated. Check out our [Contribution Guidelines](https://github.com/Recode-Hive/Stackoverflow-Analysis/tree/main/Readme)
+- Contributions are greatly appreciated. Check out our [Contribution Guidelines](https://github.com/Recode-Hive/Stackoverflow-Analysis/tree/main/Readme).
 
 ## 🛡️ License
 
@@ -102,4 +88,3 @@ Crafted with ♥ by @sanjay-kv.
 [Back to Top](#stackoverflow-analysis-guidelines)
 
 Here's a link to the project wiki: [Stackoverflow Analysis Wiki](https://github.com/tech-hardik/Stackoverflow-Analysis/wiki)
-
