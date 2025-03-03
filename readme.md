@@ -17,7 +17,7 @@
 
 [![](https://visitcount.itsvg.in/api?id=gssoc-postman&label=Profile%20Views&color=0&icon=5&pretty=true)](https://visitcount.itsvg.in)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
-This is the all-in-one place for documentation help regarding the Postman challenge.
+This is the all in one place for documentation help regarding the postman challenge.
 </div>
 
 ## 👨‍💻 Demo Video 
@@ -67,7 +67,7 @@ The data is in a CSV file format with 252,199 observations and 62 variables.
 
 ## 👨‍💻 Contributing
 
-- Contributions are greatly appreciated. Check out our [Contribution Guidelines](https://github.com/Recode-Hive/Stackoverflow-Analysis/tree/main/Readme).
+- Contributions are greatly appreciated. Check out our [Contribution Guidelines](https://github.com/Recode-Hive/Stackoverflow-Analysis/tree/main/Readme)
 
 ## 🛡️ License
 
